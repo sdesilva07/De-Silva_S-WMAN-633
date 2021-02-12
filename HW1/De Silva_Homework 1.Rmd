@@ -1,0 +1,87 @@
+
+---
+title: "Homework 1"
+author: "Sindupa De Silva"
+date: "February 10, 2021"
+output: html_document
+---
+  
+  Piping plovers nest on unvegetated beach area of saline lakes in North Dakota. Therefore, maintaining open beaches is important for conservation of this sensitive species. Data was obtained from annual surveys. Use linear regression to determine how beach areas changes through time. 
+
+The variables are:
+  
+"BeachID" - categorical variable, unique identification for each beach.
+"Year" - continuous variable, year the beach area was measured.
+"OpenBeach" - continuous variable, the area in hectares of open beach.
+
+
+1. Import the "beach.csv"" dataset into R and examine the first few rows of data.
+
+
+```{r}
+
+Plover_data <- read.csv(file = 'beach.csv')
+head(Plover_data)
+
+```
+
+2. Fit a model that includes interactions between Year and BeachID. Report estimates of all coefficients.
+
+Linear model $y = b0 + b1x1 + b2x2$
+  
+```{r}
+
+Fit <- lm (OpenBeach ~ BeachID + Year, data = Plover_data)
+summary(Fit)
+
+```
+
+
+3. Predict the beach area at all three beaches in 1992
+
+```{r}
+
+betas <- coef(Fit)
+
+BeachID_A <- betas[1] + betas[4] * 1992
+BeachID_A
+
+BeachID_B <- betas[1] + betas[2] + betas[4] * 1992
+BeachID_B
+
+BeachID_C <- betas[1] + betas[3] + betas[4] * 1992
+BeachID_C
+
+
+```
+
+4. Plot the predicted area of each beach across all years
+
+```{r}
+
+Beacharea_A <- betas[1] + betas[4] * Plover_data$Year
+Beacharea_B <- betas[1] + betas[2] + betas[4] * Plover_data$Year
+Beacharea_C <- betas[1] + betas[3] + betas[4] * Plover_data$Year
+
+All_Beach <- Beacharea_A + Beacharea_B + Beacharea_C
+
+plot(y = All_Beach, x = Plover_data$Year, xlab = 'Year', ylab = 'Beach area', type = 'b')
+
+```
+
+5. Interpret the rate of beach area change at each of the 3 beaches
+
+```{r}
+#Beach area change for Beach_A
+betas[2] + betas[3]
+#Beach area change for Beach_B
+betas[2]
+#Beach area change for Beach_C
+betas[3]
+
+```
+
+
+Looking at the beta coefficients for all three beaches: 
+Beach area at Beach "A" decreased by 52.8 ha per year, Beach "B" decreased by 68.3 ha per year, and Beach "C" increased by 15.5 ha per year.
+
