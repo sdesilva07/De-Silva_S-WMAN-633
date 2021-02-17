@@ -1,0 +1,139 @@
+
+---
+title: "Homework - 2"
+author: "Sindupa De Silva"
+date: "February 16, 2021"
+output: html_document
+---
+
+
+We will use the same beach dataset from last homework. As before, start by fitting a model with OpenBeach as the response, and include an interaction between Year and BeachID.
+
+```{r}
+Plover_data <- read.csv("beach.csv")
+
+Fit <- lm (OpenBeach ~ BeachID * Year, data = Plover_data)
+summary(Fit)
+
+```
+
+1. Calculate the residuals. Use the summary() function applied to your numeric vector of residuals to
+verify that this matches the Residuals: quantiles reported from the summary of your fitted model.
+Plot a histogram of your residuals. Do they appear reasonably Gaussian?
+
+$ei = yi ??? yi$
+residuals = observed(y) - estimated(y)
+
+```{r}
+
+# Estimated values of y
+Est <- fitted.values(Fit)
+
+# Calculated residuals (observed(y) - estimated(y))
+resid <- Plover_data$OpenBeach - Est
+resid
+
+# Compared with model residuals
+residuals(Fit)
+
+# Histogram of residuals
+plot(x = resid, y = Plover_data$OpenBeach, type = 'h')
+
+#####  The residuals do not display Gaussian distribution.  #####
+
+```
+
+
+
+2. Calculate test statistics for your regression coefficients. Verify by comparing to test statistics reported
+from model output.
+
+
+$t = ??1 ??? B1/ s{??1}$
+
+
+```{r}
+
+#Calculating test statistics
+ts_Fit <- (coef(Fit)) /
+  summary(Fit)[['coefficients']][, 'Std. Error']
+ts_Fit
+
+#Compared to model output:
+summary(Fit)[['coefficients']][, 't value']
+
+```
+
+3. Calculate p-values for your regression coefficients. Verify by comparing to p-values reported from model
+output. What are the associated null hypotheses? Do you reject or fail to reject these null hypotheses?
+Note: in the lecture slides I reported test statistics are t-distributed with n ??? 2 degrees of freedom.
+More generally, these test statistics are t-distributed with n ??? k degrees of freedom, where k is the
+number of regression coefficients in your linear model.
+
+```{r}
+
+summary(Fit)
+# Degrees of freedom = 56
+
+# For null hypothesis H0: B1 = 0
+# Two-tailed
+pt(-1 * abs(ts_Fit), df = 56) + (1 - pt(abs(ts_Fit), df = 56))
+
+# Compared to model p-values
+summary(Fit)[['coefficients']][,'Pr(>|t|)']
+
+# Intercept and Year p-values are different from model output??
+
+# If the null hypothesis is HA: B1 = 0, with all the observed p-values < 0.05, we reject the null hypothesis.
+
+```
+
+4. Select a single regression coefficient (your choice) and devise a null hypothesis that is different from
+the default in lm(). Report the test statistics, your p-value, and whether you reject or fail to reject
+your null hypothesis.
+
+```{r}
+
+# Slope coefficient for 'Year'
+summary(Fit)[['coefficients']]['Year',]
+
+# New null hypothesis: H0: B1 = 18.37
+
+#Calculating test statistics
+ts_Y <- (coef(Fit)[4] - 18.37) /
+  summary(Fit)[['coefficients']][ 'Year', 'Std. Error']
+ts_Y
+
+# p-value
+pt((ts_Y), df = 56)
+
+# The null hypothesis is H0: B1 = 18.37, with the observed p-value < 0.05, we can reject this null hypothesis.
+
+```
+
+5. Interpret output of your fitted model. Tell me how beach area does (or does not change) through time
+at each of the 3 beaches.
+
+```{r}
+
+summary(Fit)
+betas <- coef(Fit)
+
+#Beach area change for Beach_A
+betas[4]
+
+#Beach area change for Beach_B
+betas[4] + betas[5]
+
+#Beach area change for Beach_C
+betas[4] + betas[6]
+
+```
+
+Looking at the output of the full model, with all p-values < 0.05, we can reject the null hypothesis that H0: B1 = 0 and accept the alternate hypothesis.
+- The null hypothesis is that there is no change in beach area per year (H0: B1 = 0)
+- The alternate hypothesis is that there is change in beach area per year (HA: B1 =/= 0)
+
+We can see this change in the calculated rate of beach area change per year:
+Beach area at Beach "A" decreased by 18.36 ha per year, Beach "B" decreased by 1.32 ha per year, and Beach "C" decreased by 3.99 ha per year.
+
