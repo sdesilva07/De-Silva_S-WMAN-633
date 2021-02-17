@@ -1,0 +1,143 @@
+---
+title: "Exam - 1"
+author: "Sindupa De Silva"
+date: "February 17, 2021"
+output: html_document
+---
+
+Included with this exam is a dataset called “Exam 1 Data.csv”, with the following variables:
+y: response variable, continuous
+x1: predictor variable, continuous
+x2: predictor variable, continuous
+x3: categorical variable with 3 levels: "a", "b", and "c"
+
+1. Import this dataset into R and inspect the first several rows of your data
+
+```{r}
+
+data <- read.csv(file = 'Exam 1 Data.csv')
+head(data)
+
+```
+
+
+Fit a linear model that assumes your response is a function of x1, x2, and x3. Include an interaction
+between x1 and x2 only (i.e., do not include an interaction between your categorical variables and any
+other variables).
+
+```{r}
+
+Fit <- lm(y ~ x1 * x2 + x3, data = data)
+summary(Fit)
+
+```
+
+
+3. Interpret the effect of variable x1 when x2 = -1
+
+```{r}
+# Extract coeifficients
+betas <- coef(Fit)
+
+# Effect of variable x1 when x2 = -1
+betas[2] + betas[3] * -1
+
+```
+
+
+4. Interpret the effect of variable x1 when x2 = 1
+
+```{r}
+
+# Effect of variable x1 when x2 = 1
+betas[2] + betas[3] * 1
+
+
+```
+
+
+5. Interpret the effect of variable x3
+
+```{r}
+
+# Effect of b and C
+betas[4] + betas[5]
+
+# Effect of a and c
+betas[1] + betas[5]
+
+
+```
+
+
+6. Describe how R codes the categorical variable x3. Demonstrate by reporting the first 5 values of
+variables derived from x3
+
+```{r}
+
+# Dummy variables
+cbind(data$x3[1:5],
+ifelse(data$x3 == 'b', 1, 0)[1:5],
+ifelse(data$x3 == 'c', 1, 0)[1:5])
+
+
+```
+
+
+7. Derive the test statistic and p-value associated with the interaction between x1 and x2. What is the
+null hypothesis assumed by the "lm()" function? Do we reject or fail to reject this null hypothesis?
+Defend your answer.
+
+
+```{r}
+# degrees of freedom
+nrow(data) - 6
+
+# Test statistic
+ts <- (coef(Fit)[6]) / summary(Fit)[['coefficients']][6, 'Std. Error']
+ts
+
+# P-value for a two-tailed 
+pt(q = - ts, df = 94) + (1 - pt(q = ts, df = 94))
+
+```
+
+The Null hypothesis for the interaction of x1 and x2 (HA:B0 = 0) is that the slope coefficient for x1:x2 = 0. 
+With a p-value > 0.05 we fail to reject the null hypothesis.
+
+
+8. Assume you have the following realizations of random variable Y : y = (3, 8, 7).
+Further assume realizations of the random variable Y are Gaussian distributed: y ~ Gaussian(μ, σ2).
+Fix σ2 = 1 and μ = 8, and evaluate the probability density at each of your 3 realizations.
+
+```{r}
+# Create a vector with all realizations of y
+y <- c(3, 8, 7)
+
+# Probability Density Function
+mu <- 8
+v <- 1
+1 / (sqrt(2 * pi * v)) * exp(- (y - mu) ^ 2 / (2 * v))
+
+```
+
+
+9. What is a type I error? What is a p-value? How are the two quantities related?
+
+A Type I error is defined as "Falsely rejecting a null hypothesis that is true", with a probability error (α) of 0.05.
+
+A p-value is defined as "The probability of observing a more extreme value of a test statistic, under
+the assumptions of the null hypothesis", which means that if we observe an extreme value of our test statistic we
+can reject our null hypothesis.
+
+The two are related when we observe extreme values of our test statistic even when the null hypothesis is true. In such cases, we only reject the null hypothesis if our p-value is < 0.05.
+
+
+
+10. What is a fundamental assumption we must make to derive inference about regression coefficients of a
+linear model?
+
+We must assume a statistical model for the residuals, which is that the residuals are distributed as Gaussian.
+$ei ~ Gaussian(0, σ2)$
+
+
