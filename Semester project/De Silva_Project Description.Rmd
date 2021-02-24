@@ -1,0 +1,89 @@
+---
+title: "Project Description"
+author: "Sindupa De Silva"
+date: "February 24, 2021"
+output: pdf_document
+---
+
+
+**1. A description of the study system and experimental design**
+
+
+Grotto sculpin (*Cottus specus*) are a federally endangered troglomorphic fish that are endemic to Perryville, Missouri U.S.A. They are one of few fish species on earth that are adapted to live in hypogean streams, with the ability to forage, spawn, migrate and survive in the absence of light and connectivity to external ecosystems as well as rapidly fluctuating water depths. For this study, the habitat characteristics of observed spawning sites were measured and compared to random sites to determine the preferred spawning habitat of the grotto sculpin. Two hypogean streams were sampled for this study: Tom Moore cave and Mystery cave in Perry County, Missouri U.S.A.
+
+
+Spawning sites were located by slowly walking upstream and visually inspecting the entire stream (i.e., bank to bank) for submerged rocks that had sediment cleared out from beneath them. A spawning site was determined by the observation of one or more egg masses attached to the underside of a rock, with or without a fish guarding them. After locating a spawning site, water quality and habitat measurements were collected from each site. Similar measurements were repeated at randomly selected sites along the stream channel. I will use this data to evaluate the differences between spawning and random sites, thereafter determine the water quality and habitat characteristics Grotto sculpin select to spawn in. 
+
+
+
+**2. A list of questions you are potentially interested in addressing with the data**
+
+
+
+**A.** What are the differences of habitat characteristics between spawning sites and random sites?
+
+**B.** What are the differences of water quality between spawning sites and random sites?
+
+**C.** What are the habitat characteristics and water quality selected by Grotto sculpin to spawn in?
+
+
+
+**3. A description of your data, including explicit reference to your response and potential predictor variables**
+
+```{r}
+
+Data <- read.csv("Grotto_data.csv")
+
+colnames(Data) # Response and predictor variables
+
+```
+
+Replicates =  Spawning sites (25), Random sites (250)
+
+
+##### Response variables
+  + Spawning sites
+  
+
+##### Predictor variables
+
+**Water Quality**
+
+  + Temperature (C◦)
+  
+  + Conductivity (µS/cm) 
+  
+  + Dissolved oxygen (mg/L)
+  
+  + pH
+  
+  
+  **Habitat characteristics**
+
+  + Substrate type under and around nest (categorized into bedrock, cobble, pebble, silt or mud)
+  
+  + Substrate depth (cm)
+  
+  + Average water depth (cm)
+  
+  + Water velocity (ms-1)
+  
+  + Wet and dry width of stream (m)
+  
+  + Slope of both banks
+
+
+**4. Anything unique or otherwise interesting about the dataset**
+
+
+- Additional data include: the cave section number that was sampled (ascending towards the stream origin), sampled rock's average depth and with, rock underside surface and if the rock had a hole through it.
+
+- Field observations showed that Grotto sculpin select to spawn on the upstream end of the stream. This is reflected on the cave section number.
+
+- Using the stream water quality data and surface land-use data, alongside climate data, additional analysis can be conducted to study the impacts of land-use practices on stream water quality.
+
+
+
+
+
+

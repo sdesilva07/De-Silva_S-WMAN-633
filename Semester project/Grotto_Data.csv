@@ -1,0 +1,277 @@
+Sample_Date,Site_Type,Cave_Name,Cave_Sect_No,Rock  #,Pic #,Eggs_P/AB ,Fish_P/AB,Fish_L/W,1_Water_depth,2_Water_depth,3_Water_depth,Avg_depth,Water_ velocity (m/s),Sect_Dry_width (cm),Sect_Wet_width (cm),Rock_height_1,Rock_height_2,Rock_height_3,Rock_height_4,"Rock_underside_Concave, Flat, Convex",Rock_Yole_Y/N,Substrate_under_rock,Substrate_around_ rock,Substrate_depth  (cm),C,DO,T,pH,Left_Slope,Right_Slope,Additional_Notes
+1/17/2017,Spawning,Tom Moore,SP,T1,,P,P,2 fish - 92mm/ 7.3g,13,15,14,14,0.05,419,224,8,7.8,7,0.9,Concave,N,Bedrock,Bedrock,0.9,391,9.6,11.7,7.42,25,90,Small rock in middle of stream
+1/17/2017,Spawning,Tom Moore,SP,T2,,P,AB,,24,22.5,22,22.5,0.05,465,350,7,10,7,8,Concave,N,Bedrock,Bedrock,0.7,390,8.25,11.85,7.5,5,90,Small rock in middle of stream
+1/23/2017,Spawning,RunningB,20,T1,RB01,P,P,3 fish (no data),10,17,16,14.33333333,0.12,297,90,13,12,9,14,Concave,N,Cobble,Bedrock,2.5,578,9.13,13.75,7.49,30,25,"Large rock along bank, attached so could not lift up to see. Felt eggs"
+1/24/2017,Spawning,Mystery,99,T1,MY1,P,P,98mm/ 11.4g,4,8,9,7,0.12,362,200,7,7.5,10,5.5,Concave,Y,Cobble, Bedrock,0.9,586,10.28,11.02,7.93,15,18,Large rock in the middle of  stream
+12/27/2016,Spawning,Mystery,99,T9,MY66,P,AB,,4,5.5,4,4.5,0.12,368,120,10,15,10,6,Convex,N,Cobble,Bedrock,1.5,586,10.28,11.02,7.93,15,18,Large rock along bank (used to have eggs)
+1/17/2017,Spawning,Tom Moore,137,T3,,P,AB,,14,22,30,21.5,0.62,737,125,11,11,14,8,Convex,N,Rock,Bedrock,0.7,386.9,8.65,13.78,7.52,25,90,Large rock in the middle of stream
+1/24/2017,Spawning,Mystery,72,T2,MY2,P,AB,,8,12,10,10,0.33,322,115,8,12,8,7,Convex,N,Silt,Bedrock,2.5,584,10.52,11.26,8.06,69,10,Large rock in the middle of stream
+1/24/2017,Spawning,Mystery,30,T3,MY13,P,P,(no data),7,5,6,6,0.18,384,346,6,8,4,9,Convex,N,Bedrock,Bedrock,0.8,587,9.32,12.5,8.02,24,26,Large rock in the middle of stream
+1/25/2017,Spawning,Mystery,RF0,T4,MY23,P,P,(no data),11,12,9,10.66666667,0.02,414,305,8,4.2,5,6,Convex,N,Cobble,Bedrock,0.8,607.6,9.23,13.5,7.62,65,29,Large rock along bank
+1/25/2017,Spawning,Mystery,RF0,T5,MY24,P,P,(no data),10,11,13,11.33333333,0.02,500,290,14.1,12.4,16.5,12.4,Convex,N,Pebble,Bedrock,0.6,518,7.92,13.57,7.71,64,24,Large rock along bank
+1/31/2017,Spawning,Tom Moore,116,T9,,P,P,2 fish - 91mm/ 7.9g - 90mm/ 5.8g,22,30,33,28.33333333,0.05,500,300,1,1,1,0.5,Convex,N,Silt,Bedrock,0.6,553,8,13.89,6.26,40,30,Small rock in middle of stream
+1/31/2017,Spawning,Tom Moore,118,T10,,P,P,(no data),16,14,4,11.33333333,0.05,528,228,1,1,3.5,0.5,Convex,N,Silt,Bedrock,0.8,553,8,13.89,6.26,90,20,Small rock in middle of stream
+2/5/2017,Spawning,Tom Moore,119,T11,,P,P,(no data),20,17,16,17.66666667,0.05,380,310,1,1,2,0.5,Convex,N,Silt,Bedrock,1.2,555,8.5,19.2,6.35,40,35,Small rock in middle of stream
+2/5/2017,Spawning,Tom Moore,121,T13,,P,P,(no data),20,13,4,12.33333333,0.05,510,260,1,1,1,0.5,Convex,N,Silt,Bedrock,0.5,555,8,19,6.3,10,30,Small rock in middle of stream
+2/16/2017,Spawning,Tom Moore,117,T17,,P,P,91mm/ 6.5g,2,5,6,4.333333333,0.05,450,320,1,1,0.5,0.25,Convex,N,Silt,Bedrock,1.6,652,9.74,13.65,8.26,19,25,Small rock in middle of stream
+12/21/2016,Spawning,Mystery,15,T8,MY51,P,AB,,11.5,14,15,13.5,0.05,420,162,5,5,3.5,4,Flat,N,Silt,Cobble,3,638,7.02,13.05,7.91,65,15,Large rock along bank (used to have eggs)
+1/25/2017,Spawning,Mystery,RF0,T6,MY25,P,P,(no data),6.8,4,5,5.266666667,0.12,513,120,3.1,5,41,2,Flat,N,Bedrock,Bedrock,0.7,518,7.92,13.57,7.71,34,52,Large rock along bank
+1/25/2017,Spawning,Mystery,RF0,T7,MY26,P,P,(no data),6.8,4,5,5.266666667,0.12,513,120,1.2,1.3,3,4,Flat,N,Bedrock,Bedrock,0.8,518,7.92,13.57,7.71,34,52,Small rock along bank
+1/31/2017,Spawning,Tom Moore,SP,T4,,P,P,102mm/ 10.7g,19,15,10,14.66666667,0.05,419,224,2,2,1,3,Flat,N,Rock,Bedrock,1.2,507,8.96,12.44,6.97,25,90,Small rock in middle of stream
+1/31/2017,Spawning,Tom Moore,110,T5,,P,AB,,29,33,27,29.66666667,0.05,550,280,1,3,1,5,Flat,N,Silt,Cobble,1.5,560,8.2,13.89,6.87,90,90,Small rock in middle of stream. 3 egg masses.
+1/31/2017,Spawning,Tom Moore,110,T6,,P,AB,,29,33,27,29.66666667,0.05,550,280,1,6,5,1,Flat,N,Silt,Cobble,1.3,560,8.2,13.89,6.87,UC,UC,Small rock in middle of stream
+1/31/2017,Spawning,Tom Moore,113,T7,,P,P,80mm/ NA,12,37,47,32,0.06,450,270,1,1,1.5,1,Flat,N,Silt,Cobble,0.6,555,8.2,13.89,6.49,90,UC,Small rock in middle of stream
+1/31/2017,Spawning,Tom Moore,113,T8,,P,P,94mm/ 7.6g,12,37,47,32,0.06,450,270,1,1,0.5,0.5,Flat,N,Silt,Bedrock,0.7,555,8.2,13.89,6.49,91,UC,Small rock in middle of stream. 4 egg masses
+2/5/2017,Spawning,Tom Moore,120,T12,,P,P,(no data),13,10,10,11,0.06,460,370,1,1,2,2,Flat,N,Silt,Bedrock,1.2,556,8.2,19.2,6.35,20,30,Large rock along bank
+2/5/2017,Spawning,Tom Moore,121,T14,,P,P,(no data),20,13,4,12.33333333,0.05,510,260,0.5,0.5,0.6,1,Flat,N,Silt,Bedrock,1.4,555,8,19,6.3,10,30,Small rock in middle of stream
+1/24/2017,Random,Mystery,0,R1,MY3,AB,AB,,36,19,49,34.66666667,0.03,580,382,31,30,27,27,Concave,N,Bedrock,Mud,0.8,580,9.44,13.01,7.95,90,90,Large rock in the middle of stream
+1/25/2017,Random,Mystery,SS1,R13,MY16,AB,AB,,11.5,14,12,12.5,0.14,415,80,10,8,6,3,Concave,N,Bedrock,Cobble,0.7,592,8.99,13.92,7.99,31,44,Small rock along bank
+1/25/2017,Random,Mystery,SS22,R14,MY17,AB,AB,,2,3.5,4,3.166666667,0.14,347,100,7,5,2,3,Concave,N,Pebble,Cobble,0.7,592,8.99,13.92,7.99,7,53,Small rock in middle of stream
+1/26/2017,Random,Mystery,80,R26,MY33,AB,AB,,5,3,1,3,0.11,438,64,7,4,3,4,Concave,N,Mud,Cobble,0.9,554,9.51,10.94444444,9.25,9,21,Small rock along bank
+1/26/2017,Random,Mystery,85,R27,MY34,AB,AB,,7,8,7,7.333333333,0.07,265,155,4,5,1,7,Concave,N,Mud,Bedrock,0.5,554,9.51,10.94444444,9.25,22,40,Large rock in the middle of stream 
+1/26/2017,Random,Mystery,86,R29,MY36,AB,AB,,19,21,13,17.66666667,0.18,428,247,2,5,4,4,Concave,N,Mud,Bedrock,0.9,551,10.32,10.83333333,9.26,25,23,Large rock in the middle of stream 
+1/26/2017,Random,Mystery,124,R41,MY48,AB,AB,,4.5,8,5.5,6,0.3,260,117,2,4,5,4,Concave,N,Bedrock,Bedrock,4.5,542,10.09,10.16666667,8.61,29,32,Small rock in middle of stream
+2/22/2017,Random,Mystery,RF0,R44,MY52,AB,AB,,2,14,15,10.33333333,0.02,500,80,11,9,5,6,Concave,N,Bedrock,Silt,0.9,618,7.92,13.57,7.71,5,10,Small rock along bank
+2/22/2017,Random,Mystery,119,R72,MY80,AB,AB,,2,7,5,4.666666667,0.2,300,96,3,1,2,2,Concave,N,Cobble,Silt,6.8,559,10.16,10.55555556,8.7,15,58,Small rock in middle of stream
+4/19/2017,Random,Tom Moore,59,R72,,AB,AB,,9.1,11.4,9.6,10.03333333,0.02,355,282,1.5,4.5,4.4,5,Concave,N,Bedrock,Pebble,0.7,602.3,11.55,13.92,8.08,74,90,
+4/19/2017,Random,Tom Moore,69,R77,,AB,AB,,11,12.5,13,12.16666667,0.2,378,217,2.8,2.4,2.5,3,Concave,N,Bedrock,Silt,0.6,601,12.14,13.84,8.1,25,7,Pool
+4/19/2017,Random,Tom Moore,69,R79,,AB,AB,,11,12.5,13,12.16666667,0.2,378,217,3.5,2.4,2.5,2.3,Concave,N,Bedrock,Silt,1.3,601,12.14,13.84,8.1,25,7,Pool
+4/19/2017,Random,Tom Moore,78,R86,,AB,P,2 fish (85mm),6.6,8.1,0.4,5.033333333,0.01,537,360,2,3,3.5,2.2,Concave,N,Bedrock,Silt,1.7,601.6,11.35,13.88,8.04,17,2,
+4/19/2017,Random,Tom Moore,78,R88,,AB,P,2 fish (85mm),6.6,8.1,0.4,5.033333333,0.01,537,360,10,8.5,9.3,11,Concave,N,Bedrock,Silt,1.2,601.6,11.35,13.88,8.04,17,2,
+4/19/2017,Random,Tom Moore,89,R95,,AB,P,3+ fish,32,37.5,37.5,35.66666667,0.01,506,382,2.8,2.5,3,2,Concave,N,Bedrock,Mud,1.8,608.7,11.45,13.85,8.1,90,34,
+4/19/2017,Random,Tom Moore,89,R96,,AB,P,3+ fish,32,37.5,37.5,35.66666667,0.01,506,382,2.5,2.3,3,4,Concave,N,Bedrock,Mud,1.4,608.7,11.45,13.85,8.1,90,34,
+4/19/2017,Random,Tom Moore,89,R99,,AB,P,3+ fish,32,37.5,37.5,35.66666667,0.01,506,382,5,6,6,1.9,Concave,N,Bedrock,Mud,1,608.7,11.45,13.85,8.1,90,34,
+4/19/2017,Random,Tom Moore,96,R107,,AB,AB,,6,4,1.9,3.966666667,0.06,272,168,2.8,3.4,2.2,2,Concave,N,Bedrock,Cobble,1.7,636.5,11.6,13.96,7.99,29,29,
+4/19/2017,Random,Tom Moore,105,R113,,AB,AB,,23.5,49,34.5,35.66666667,0.01,324,281,4,2.5,2.4,2.1,Concave,N,Bedrock,Mud,2.5,640,11.64,13.94,7.82,90,90,Pool
+4/19/2017,Random,Tom Moore,105,R114,,AB,AB,,23.5,49,34.5,35.66666667,0.01,324,281,2.3,4.6,2,1.7,Concave,N,Bedrock,Mud,2.6,640,11.64,13.94,7.82,90,90,Pool
+4/19/2017,Random,Tom Moore,105,R117,,AB,AB,,23.5,49,34.5,35.66666667,0.01,324,281,2.5,3.4,3.4,3.6,Concave,N,Bedrock,Mud,2.7,640,11.64,13.94,7.82,90,90,Pool
+4/19/2017,Random,Tom Moore,117,R142,,AB,AB,3 fish (No data),2,5,6,4.333333333,0.05,450,320,4,3.5,3.5,2.2,Concave,N,Bedrock,Mud,3.5,652,9.74,13.65,8.26,19,25,Pool
+4/19/2017,Random,Tom Moore,134,R147,,AB,AB,,5,6.5,5.5,5.666666667,0.01,490,115,1.6,1.4,2.6,1.7,Concave,N,Bedrock,Mud,4.5,625.6,11.1,13.93,7.54,33,38,Pool
+4/19/2017,Random,Tom Moore,134,R147,,AB,AB,,5,6.5,5.5,5.666666667,0.01,490,115,3.2,2.8,1.6,2,Concave,N,Bedrock,Mud,6.3,625.6,11.1,13.93,7.54,33,38,Pool
+4/19/2017,Random,Tom Moore,135,R152,,AB,AB,,5,6.5,5.5,5.666666667,0.15,490,115,2.6,2.2,1.6,1.7,Concave,N,Bedrock,Pebble,9.4,625.6,11.1,13.93,7.54,25,17,Riffle
+4/19/2017,Random,Tom Moore,SP,R159,,AB,AB,,19,15,10,14.66666667,0.01,419,224,3.5,5.4,4.6,4.9,Concave,N,Bedrock,Silt,9.6,562.9,11.56,13.56,7.75,45,12,Upper side stream
+1/23/2017,Random,RunningB,4,R2,RB03,AB,AB,,16,17,10,14.33333333,0.05,380,156,23,7,13,9,Convex,Y,Bedrock,Cobble,0.9,575,9,13.64,7.77,13,25,Large rock along bank 
+1/23/2017,Random,RunningB,4,R3,RB04,AB,AB,,7.5,12,5.5,8.333333333,0.05,380,120,7,4,4,5,Convex,Y,Bedrock,Sitl,0.9,575,9,13.64,7.77,13,25,Small rock in middle of stream
+1/23/2017,Random,RunningB,4,R4,RB05,AB,P,(no data),8.5,7,6.5,7.333333333,0.05,380,146,6.5,8,2,6,Convex,N,Bedrock,Silt,1.5,575,9,13.64,7.77,13,11,Small rock along bank
+1/23/2017,Random,RunningB,10,R6,RB07,AB,AB,,8,10,6,8,0.07,237,75,13,11,10,10,Convex,Y,Cobble,Bedrock,3,577,8.98,13.65,7.69,44,24,Large rock along bank 
+1/23/2017,Random,RunningB,14,R7,RB08,AB,AB,,25,26,29,26.66666667,0.02,348,284,21,25,23,12,Convex,N,Cobble,Cobble,7,577,8.82,13.69,7.66,26,32,Very Large rock in the middle of stream 
+1/24/2017,Random,Mystery,15,R6,MY8,AB,AB,,10,12,9,10.33333333,0.14,413,201,10,12,10,8,Convex,N,Bedrock,Bedrock,0.9,587,9.63,12.9,7.97,28,29,Small rock in middle of stream
+1/24/2017,Random,Mystery,19,R7,MY9,AB,AB,,15,10,10,11.66666667,0.59,368,163,15,9,11,7,Convex,Y,Pebble,Cobble,0.9,587,9.63,12.9,7.97,12,88,Small rock in middle of stream
+1/24/2017,Random,Mystery,34,R11,MY14,AB,AB,,8.25,7,13.5,9.583333333,0.06,454,319,3.5,2,4,3,Convex,N,Bedrock,Bedrock,3.5,587,9.32,12.5,8.02,51,22,Small rock in middle of stream
+1/25/2017,Random,Mystery,RF9,R18,MY21,AB,AB,,6.5,13,4.5,8,0.26,273,59,1.5,3,1.5,2,Convex,N,Bedrock,Silt,0.7,607,10.02,13.43,7.55,41,32,Small rock along bank
+1/25/2017,Random,Mystery,69,R24,MY31,AB,AB,,14,16,10,13.33333333,0.07,528,166,5,4.5,8,5,Convex,N,Bedrock,Bedrock,2.5,586.3,9.28,12.09,8.03,35,85,Large rock along bank
+1/25/2017,Random,Mystery,78,R25,MY32,AB,AB,,14,26,20,20,0.06,350,260,14,20,14,10,Convex,Y,Mud,Pebble,3,586.9,10.01,12.18,8.03,15,45,Large rock in the middle of stream 
+1/26/2017,Random,Mystery,99,R32,MY39,AB,AB,,5,7,9.5,7.166666667,0.25,357,117,10,7,5,9,Convex,N,Bedrock,Bedrock,1,556,10.33,10.66666667,9.4,39,17,Large rock along bank
+1/26/2017,Random,Mystery,124,R42,MY49,AB,P,(no data),4.5,8,5.5,6,0.3,260,117,6,3,4,3,Convex,N,Bedrock,Bedrock,8,542,10.09,10.16666667,8.61,29,32,Small rock in middle of stream
+2/22/2017,Random,Mystery,52,R58,MY65,AB,AB,,15,28,11,18,0.03,320,280,8,7,9,8,Convex,N,Bedrock,Silt,2.5,591,9.28,12.65,7.99,60,50,Large rock along bank
+2/22/2017,Random,Mystery,119,R73,MY81,AB,AB,,2,7,5,4.666666667,0.2,300,96,4,2,1,1,Convex,N,Cobble,Silt,7,559,10.16,10.55555556,8.7,15,58,Small rock in middle of stream
+4/18/2017,Random,Tom Moore,1,R7,,AB,AB,,7.4,12.6,9.9,9.966666667,0.16,470,62,3.9,3,3.2,3.6,Convex,N,Cobble,Cobble,0.5,559,9.45,12,8.8,90,65,Small rock in middle of stream
+4/18/2017,Random,Tom Moore,1,R8,,AB,AB,,7.4,12.6,9.9,9.966666667,0.16,470,62,2.4,3.2,3.3,2.8,Convex,N,Cobble,Cobble,0.5,559,9.45,12,8.8,90,65,Small rock in middle of stream
+4/18/2017,Random,Tom Moore,1,R9,,AB,AB,,7.4,12.6,9.9,9.966666667,0.16,470,62,4.1,3.3,3.1,4.2,Convex,N,Cobble,Cobble,0.5,559,9.45,12,8.8,90,65,Small rock in middle of stream
+4/18/2017,Random,Tom Moore,5,R12,,AB,AB,,2.5,5.4,3.1,3.666666667,0.09,385,75,2.1,4.7,3.8,4.5,Convex,N,Cobble,Bedrock,0.9,564.8,10.2,12.5,8.5,28,10,
+4/18/2017,Random,Tom Moore,15,R27,,AB,AB,,22,26.5,18,22.16666667,0.19,275,257,1.4,2.8,4.9,3.8,Convex,N,Bedrock,Cobble,1.7,567.5,11.82,14.11,8.01,90,10,Large rock in middle of stream
+4/18/2017,Random,Tom Moore,32,R30,,AB,AB,,5,9.5,5,6.5,0.12,319,255,2,4,4,2.5,Convex,N,Bedrock,Silt,1.8,568.6,11.82,14.21,8.01,70,10,
+4/18/2017,Random,Tom Moore,32,R35,,AB,AB,,5,9.5,5,6.5,0.12,319,255,4.5,2.5,2.5,4,Convex,N,Bedrock,Silt,1.5,568.6,11.82,14.21,8.01,70,10,
+4/18/2017,Random,Tom Moore,43,R52,,AB,AB,,6,2.5,5,4.5,0.36,532,455,1,2,2,3,Convex,N,Bedrock,Pebble,2.7,535.1,11.85,14.12,7.95,35,20,
+4/18/2017,Random,Tom Moore,43,R56,,AB,AB,,6,2.5,5,4.5,0.36,532,455,1.8,1.8,0.9,1.5,Convex,N,Bedrock,Pebble,2.4,535.1,11.85,14.12,7.95,35,20,
+4/18/2017,Random,Tom Moore,43,R61,,AB,AB,,6,2.5,5,4.5,0.36,532,455,1.6,1,0.5,1,Convex,N,Bedrock,Pebble,2.6,535.1,11.85,14.12,7.95,35,20,
+4/18/2017,Random,Tom Moore,43,R62,,AB,AB,,6,2.5,5,4.5,0.36,532,455,2,4,5,4,Convex,N,Bedrock,Pebble,2.7,535.1,11.85,14.12,7.95,35,20,
+4/19/2017,Random,Tom Moore,49,R67,,AB,AB,,2.4,1.6,5.8,3.266666667,0.23,444,247,1.8,2.3,2.5,1.8,Convex,N,Bedrock,Pebble,0.9,603,11.22,13.89,8.05,68,46,
+4/19/2017,Random,Tom Moore,58,R76,,AB,AB,,9.3,17.4,35.5,20.73333333,0.02,355,282,5,2,2,2.5,Convex,N,Bedrock,Silt,0.9,602.3,11.55,13.92,8.08,90,20,Pool
+4/19/2017,Random,Tom Moore,69,R78,,AB,AB,,11,12.5,13,12.16666667,0.2,378,217,4,3,2.4,4.2,Convex,N,Bedrock,Silt,1.2,601,12.14,13.84,8.1,25,7,Pool
+4/19/2017,Random,Tom Moore,69,R80,,AB,AB,,11,12.5,13,12.16666667,0.2,378,217,4.2,5.4,4.5,4.4,Convex,N,Bedrock,Silt,1.2,601,12.14,13.84,8.1,25,7,Pool
+4/19/2017,Random,Tom Moore,78,R84,,AB,P,2 fish (85mm),6.6,8.1,0.4,5.033333333,0.01,537,360,2,4,3.5,7.5,Convex,N,Bedrock,Silt,1.7,601.6,11.35,13.88,8.04,17,2,
+4/19/2017,Random,Tom Moore,84,R92,,AB,AB,,7,6,4,5.666666667,0.17,380,140,10.1,10.6,12.9,16,Convex,N,Mud,Cobble,1,621,10.03,13.93,8.5,45,55,Very Large rock on side of stream
+4/19/2017,Random,Tom Moore,89,R97,,AB,P,3+ fish,32,37.5,37.5,35.66666667,0.01,506,382,2.6,3.5,4,4,Convex,N,Bedrock,Mud,1.2,608.7,11.45,13.85,8.1,90,34,
+4/19/2017,Random,Tom Moore,89,R98,,AB,P,3+ fish,32,37.5,37.5,35.66666667,0.01,506,382,4.5,5,5.8,4.2,Convex,N,Bedrock,Mud,1.5,608.7,11.45,13.85,8.1,90,34,
+4/19/2017,Random,Tom Moore,96,R108,,AB,AB,,6,4,1.9,3.966666667,0.06,272,168,1.4,1.6,3.5,2,Convex,N,Bedrock,Cobble,1.5,636.5,11.6,13.96,7.99,29,29,
+4/19/2017,Random,Tom Moore,105,R115,,AB,AB,,23.5,49,34.5,35.66666667,0.01,324,281,4,2.5,1.7,1.8,Convex,N,Bedrock,Mud,2.8,640,11.64,13.94,7.82,90,90,Pool
+4/19/2017,Random,Tom Moore,105,R119,,AB,AB,,23.5,49,34.5,35.66666667,0.01,324,281,3,2.2,2.7,2.8,Convex,N,Bedrock,Mud,2.7,640,11.64,13.94,7.82,90,90,Pool
+4/19/2017,Random,Tom Moore,105,R120,,AB,AB,,23.5,49,34.5,35.66666667,0.01,324,281,2.2,1.9,1.9,2,Convex,N,Bedrock,Mud,2.6,640,11.64,13.94,7.82,90,90,Pool
+4/19/2017,Random,Tom Moore,110,R122,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,0.01,550,280,6,5.5,3.8,3.9,Convex,N,Bedrock,Mud,2.3,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,110,R134,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,2.5,4.5,2.4,3,Convex,N,Bedrock,Mud,2.6,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,113,R137,,AB,AB,5 fish (No data),45,87,44,58.66666667,0.01,450,270,2.5,3,3.8,2.8,Convex,N,Cobble,Silt,2.8,641.5,11.05,13.92,7.74,90,90,"Pool, Undercut Banks"
+4/19/2017,Random,Tom Moore,113,R140,,AB,AB,5 fish (No data),45,87,44,58.66666667,0.01,450,270,2,2.2,2.8,2.2,Convex,N,Cobble,Silt,2.6,641.5,11.05,13.92,7.74,90,90,"Pool, Undercut Banks"
+4/19/2017,Random,Tom Moore,113,R141,,AB,AB,5 fish (No data),45,87,44,58.66666667,0.01,450,270,2.5,3,4.5,2,Convex,N,Cobble,Silt,2.8,641.5,11.05,13.92,7.74,90,90,"Pool, Undercut Banks"
+4/19/2017,Random,Tom Moore,117,R142,,AB,AB,3 fish (No data),2,5,6,4.333333333,0.05,450,320,1.5,1.8,2.7,3.2,Convex,N,Bedrock,Mud,3.2,652,9.74,13.65,8.26,19,25,Pool
+4/19/2017,Random,Tom Moore,134,R147,,AB,AB,,5,6.5,5.5,5.666666667,0.01,490,115,3,1.6,2.3,3,Convex,N,Bedrock,Mud,6.6,625.6,11.1,13.93,7.54,33,38,Pool
+4/19/2017,Random,Tom Moore,135,R152,,AB,AB,,5,6.5,5.5,5.666666667,0.15,490,115,2.6,5,3.8,2.6,Convex,N,Bedrock,Pebble,9.5,625.6,11.1,13.93,7.54,25,17,Riffle
+4/19/2017,Random,Tom Moore,SP,R162,,AB,AB,,11,15,14,13.3,0.05,410,220,2.6,3.4,3.4,2.4,Convex,N,Bedrock,Pebble,2,391,9.6,11.7,7.42,25,90,Extras
+4/19/2017,Random,Tom Moore,SP,R164,,AB,AB,,18,25,21,21,0.05,450,300,2.8,1.6,1.4,2.9,Convex,N,Bedrock,Pebble,0.9,391,9.6,11.7,7.42,25,90,Extras
+4/19/2017,Random,Tom Moore,SP,R165,,AB,AB,,16,12,18,15.3,0.05,461,289,8,5.5,6.7,4.1,Convex,N,Bedrock,Pebble,3,390,8.25,11.85,7.5,5,90,Extras
+1/23/2017,Random,RunningB,3,R1,RB02,AB,AB,,10,12,10,10.66666667,0.06,326,125,5,15,7,9,Flat,N,Bedrock,Bedrock,0.5,575,9.4,13.65,7.75,17,15,Large rock in the middle of stream 
+1/23/2017,Random,RunningB,9,R5,RB06,AB,AB,,16,19,13,16,0.07,259,85,8.5,7,3.5,5,Flat,N,Bedrock,Silt,2,577,8.98,13.65,7.69,32,45,Small rock in middle of stream
+1/24/2017,Random,Mystery,2,R2,MY4,AB,AB,,21,37.5,35,31.16666667,0.11,641,305,17.5,41,14.5,29,Flat,N,Bedrock,Bedrock,0.9,580,9.44,13.01,7.95,40,80,Large rock along bank
+1/24/2017,Random,Mystery,4,R3,MY5,AB,AB,,22.5,35,23.5,27,0.08,555,262,16.5,15,10,17,Flat,N,Bedrock,Bedrock,0.9,580,9.44,13.01,7.95,89,33,Small rock in middle of stream
+1/24/2017,Random,Mystery,9,R4,MY6,AB,AB,,3,9,5.5,5.833333333,0.19,505,362,3.5,5.5,2,2,Flat,N,Bedrock,Cobble,0.7,587,9.63,12.9,7.97,45,26,Small rock along bank
+1/24/2017,Random,Mystery,13,R5,MY7,AB,AB,,7.75,10,12.5,10.08333333,0.05,479,280,6.5,6,7,5.5,Flat,N,Mud,Mud,0.7,587,9.63,12.9,7.97,46,14,Large rock in the middle of stream 
+1/24/2017,Random,Mystery,22,R8,MY10,AB,AB,,12,14,11,12.33333333,0.07,387,237,10.5,6,7,3,Flat,N,Bedrock,Bedrock,0.9,586,9.89,12.52,8.03,47,61,Small rock in middle of stream
+1/24/2017,Random,Mystery,24,R9,MY11,AB,AB,,8,5,6,6.333333333,0.34,314,161,4.5,4,4,3,Flat,N,Bedrock,Bedrock,0.8,586,9.89,12.52,8.03,90,51,Small rock in middle of stream
+1/24/2017,Random,Mystery,28,R10,MY12,AB,AB,,16,18.5,17.5,17.33333333,0.18,340,192,5,2.5,4,6,Flat,N,Bedrock,Bedrock,0.9,587,9.32,12.5,8.02,79,45,Small rock in middle of stream
+1/24/2017,Random,Mystery,37,R12,MY15,AB,AB,,5.5,7,4.5,5.666666667,0.31,464,271,6,4,7,6,Flat,N,Mud,Mud,9,588,9.09,12.47,8,14,57,Small rock along bank
+1/25/2017,Random,Mystery,SS16,R15,MY18,AB,AB,,7,7.5,9,7.833333333,0.03,400,224,4,2,7,8,Flat,Y,Cobble,Mud,0.9,588,8.86,13.95,7.97,42,66,Small rock in middle of stream
+1/25/2017,Random,Mystery,SS9,R16,MY19,AB,AB,,1.5,4,8,4.5,0.04,300,95,2,5,4,3,Flat,N,Bedrock,Bedrock,0.5,586,9.12,14.02,7.93,90,34,Large rock in the middle of stream 
+1/25/2017,Random,Mystery,SS3,R17,MY20,AB,AB,,3.7,4.1,2.2,3.333333333,0.13,290,80,2.6,3,3.2,6,Flat,N,Pebble,Pebble,0.7,586,9.51,13.93,7.96,7,25,Small rock in middle of stream
+1/25/2017,Random,Mystery,RF5,R19,MY22,AB,P,2 fish (no data),9.6,6.6,4.3,6.833333333,0.02,372,207,4.8,4.7,3.2,2.9,Flat,Y,Cobble,Silt,0.6,607,10.02,13.43,7.55,72,42,Large rock in the middle of stream 
+1/25/2017,Random,Mystery,39,R20,MY27,AB,AB,,34.5,39,26,33.16666667,0.01,569,384,2,4.2,5.8,3,Flat,N,Bedrock,Bedrock,0.8,591.7,9.27,12.6,7.96,30,40,Large rock in the middle of stream 
+1/25/2017,Random,Mystery,43,R21,MY28,AB,AB,,30,27.5,38.5,32,0.02,365,265,3.5,3,5,6,Flat,N,Bedrock,Mud,0.9,,9.27,12.6,7.96,90,90,Small rock in middle of stream
+1/25/2017,Random,Mystery,49,R22,MY29,AB,AB,,36,40,39,38.33333333,0.03,290,240,6,9,3,4,Flat,N,Bedrock,Bedrock,0.9,591.5,9.28,12.65,7.99,60,50,Small rock in middle of stream
+1/25/2017,Random,Mystery,58,R23,MY30,AB,AB,,6,12.5,20,12.83333333,0.06,655,230,6.5,4,4,2.5,Flat,N,Bedrock,Bedrock,2,586.8,9.39,12.02,8.02,52,40,Small rock along bank
+1/26/2017,Random,Mystery,86,R28,MY35,AB,AB,,19,21,13,17.66666667,0.18,428,247,2,5,4,2,Flat,N,Mud,Bedrock,0.8,551,10.32,10.83333333,9.26,25,23,Small rock in middle of stream
+1/26/2017,Random,Mystery,86,R30,MY37,AB,AB,,19,21,13,17.66666667,0.18,428,189,4,7,7,3,Flat,N,Mud,Bedrock,0.9,551,10.32,10.83333333,9.26,25,23,Large rock in the middle of stream 
+1/26/2017,Random,Mystery,93,R31,MY38,AB,AB,,11.5,16,14,13.83333333,0.38,335,212,3,5,7,4,Flat,Y,Bedrock,Bedrock,0.5,556,10.33,10.66666667,9.4,25,11,Large rock along bank
+1/26/2017,Random,Mystery,102,R33,MY40,AB,AB,,22,19,25,22,0.01,206,192,2,4,7,1,Flat,N,Bedrock,Mud,1.5,559,9.67,10.61111111,8.98,35,80,Large rock along bank
+1/26/2017,Random,Mystery,104,R34,MY41,AB,AB,,12,13,2,9,0.22,307,212,2,4,3,5,Flat,N,Bedrock,Bedrock,2,559,9.67,10.61111111,8.98,33,22,Small rock along bank
+1/26/2017,Random,Mystery,104,R35,MY42,AB,AB,,17,20,21,19.33333333,0.08,321,111,9,14,5,6,Flat,N,Bedrock,Mud,2.5,559,9.67,10.61111111,8.98,65,30,Large rock in the middle of stream 
+1/26/2017,Random,Mystery,110,R36,MY43,AB,AB,,14,22,14.5,16.83333333,0.05,429,284,3,4,2,2,Flat,N,Bedrock,Bedrock,3.4,557,9.49,10.61111111,8.81,8,22,Small rock in middle of stream
+1/26/2017,Random,Mystery,112,R37,MY44,AB,AB,,4,6,6,5.333333333,0.15,362,109,1,0.5,1,2,Flat,N,Cobble,Mud,3,557,9.49,10.61111111,8.81,21,46,Small rock along bank
+1/26/2017,Random,Mystery,118,R38,MY45,AB,P,(no data),6,14,11,10.33333333,0.26,350,110,0.5,3,2,1,Flat,N,Cobble,Mud,3.2,559,10.16,10.55555556,8.7,15,58,Large rock in the middle of stream 
+1/26/2017,Random,Mystery,121,R39,MY46,AB,AB,,8.5,8,5,7.166666667,0.17,430,106,4.5,2,4,6,Flat,N,Bedrock,Bedrock,3,542,10.09,10.16666667,8.61,26,45,Small rock in middle of stream
+1/26/2017,Random,Mystery,124,R40,MY47,AB,AB,,4.5,8,5.5,6,0.3,260,117,4,6,5,4,Flat,N,Bedrock,Bedrock,3,542,10.09,10.16666667,8.61,29,32,Large rock in the middle of stream 
+1/26/2017,Random,Mystery,127,R43,MY50,AB,AB,,13,19,17.5,16.5,0.08,147,196,3,7,1,6,Flat,N,Silt,Pebble,26.4,543,9.91,10.33333333,8.47,110,90,Small rock in middle of stream
+2/16/2017,Random,Tom Moore,87,R1,,AB,AB,,11,7,14,10.66666667,0.05,390,327,8,5,5,4,Flat,N,Silt,Cobble,0.9,621,10.03,13.93,8.5,45,45,Large rock in middle of stream
+2/16/2017,Random,Tom Moore,86,R2,,AB,AB,,7,6,4,5.666666667,0.17,380,140,8,4,3,5,Flat,N,Mud,Silt,1.2,621,10.03,13.93,8.5,45,55,Small rock in middle of stream
+2/16/2017,Random,Tom Moore,117,R4,,AB,P,49mm/ 1.1g,2,5,6,4.333333333,0.05,530,310,0.5,0.5,0.6,1,Flat,N,Cobble,Cobble,1.8,652,9.74,13.65,8.26,19,25,Small rock in middle of stream
+2/16/2017,Random,Tom Moore,135,R5,,AB,AB,,7.5,11,6.5,8.333333333,0.08,450,280,1,3,2,1,Flat,N,Mud,Cobble,2.1,655,9.85,13.97,8.14,18,32,Small rock in middle of stream
+2/16/2017,Random,Tom Moore,134,R6,,AB,AB,,6,17,8,10.33333333,0.05,480,290,8,5.5,4,5,Flat,N,Bedrock,Silt,3.2,655,9.85,13.97,8.14,11,35,Small rock in middle of stream
+2/22/2017,Random,Mystery,RF0,R45,MY53,AB,AB,,2,32,2,12,0.02,500,145,6,9.5,3,3,Flat,N,Bedrock,Silt,0.5,618,7.92,13.57,7.71,5,20,Small rock along bank
+2/22/2017,Random,Mystery,RF0,R46,MY54,AB,AB,,2,1.5,1.5,1.666666667,0.02,500,145,12,10,13,12,Flat,N,Bedrock,Silt,0.5,618,7.92,13.57,7.71,5,20,Small rock along bank
+2/22/2017,Random,Mystery,32,R47,MY55,AB,AB,,12,19,13,14.66666667,0.08,385,230,2,3,2,1,Flat,N,Cobble,Pebble,0.9,647,6.41,12.93,7.9,20,20,Small rock in middle of stream
+2/22/2017,Random,Mystery,32,R48,MY56,AB,AB,,6.6,6.5,4.5,5.866666667,0.08,385,230,1,1.5,1,0.5,Flat,N,Cobble,Pebble,1,647,6.41,12.93,7.9,20,20,Small rock in middle of stream
+2/22/2017,Random,Mystery,32,R49,MY57,AB,AB,,6.6,6.5,4.5,5.866666667,0.08,385,230,0.5,1,1,3,Flat,N,Cobble,Pebble,1,647,6.41,12.93,7.9,20,20,Small rock in middle of stream
+2/22/2017,Random,Mystery,32,R50,MY58,AB,AB,,6.6,6.5,4.5,5.866666667,0.08,385,230,5,3,5,4,Flat,N,Cobble,Pebble,1.5,647,6.41,12.93,7.9,20,20,Small rock in middle of stream
+2/22/2017,Random,Mystery,32,R51,MY,AB,AB,,6.6,6.5,4.5,5.866666667,0.08,385,230,3,4,2,1,Flat,N,Cobble,Pebble,1.5,647,6.41,12.93,7.9,20,20,Small rock in middle of stream
+2/22/2017,Random,Mystery,43,R52,MY59,AB,AB,,42,30,22,31.33333333,0.02,365,265,5,3,5,1,Flat,N,Bedrock,Silt,2.7,592,9.27,12.6,7.96,30,40,Large rock in the middle of stream 
+2/22/2017,Random,Mystery,52,R53,MY60,AB,AB,,15,28,11,18,0.03,320,280,1,6,1,2,Flat,N,Bedrock,Silt,2.2,591,9.28,12.65,7.99,60,50,Large rock along bank
+2/22/2017,Random,Mystery,52,R54,MY61,AB,AB,,15,28,11,18,0.03,320,280,7,2,1,2,Flat,N,Bedrock,Mud,2,591,9.28,12.65,7.99,60,50,Large rock along bank
+2/22/2017,Random,Mystery,52,R55,MY62,AB,AB,,15,28,11,18,0.03,320,280,7,9,8,9,Flat,N,Bedrock,Mud,2.4,591,9.28,12.65,7.99,60,50,Large rock along bank
+2/22/2017,Random,Mystery,52,R56,MY63,AB,AB,,15,28,11,18,0.03,320,280,2,3,3,2,Flat,N,Bedrock,Mud,2,591,9.28,12.65,7.99,60,50,Large rock along bank
+2/22/2017,Random,Mystery,52,R57,MY64,AB,AB,,15,28,11,18,0.03,320,280,2,1,0.5,2,Flat,N,Bedrock,Mud,2.2,591,9.28,12.65,7.99,60,50,Small rock along bank
+2/22/2017,Random,Mystery,108,R59,MY67,AB,AB,,32,42,31,35,0.05,180,205,1,2,1,1,Flat,N,Bedrock,Mud,2.3,635,6.14,12.68,7.94,70,75,Small rock along bank
+2/22/2017,Random,Mystery,108,R60,MY68,AB,AB,,32,42,31,35,0.05,180,205,5,3,2,1,Flat,N,Bedrock,Mud,3.5,635,6.14,12.68,7.94,70,75,Small rock along bank
+2/22/2017,Random,Mystery,107,R61,MY69,AB,AB,,32,42,31,35,0.05,362,109,5,5,3,4,Flat,N,Bedrock,Mud,3.8,635,6.14,12.68,7.94,70,75,Large rock along bank
+2/22/2017,Random,Mystery,108,R62,MY70,AB,AB,,32,42,31,35,0.05,362,109,5,2,2,4,Flat,N,Bedrock,Mud,2.9,635,6.14,12.68,7.94,70,75,Large rock in the middle of stream 
+2/22/2017,Random,Mystery,112,R63,MY71,AB,AB,,4,6,6,5.333333333,0.15,362,109,3,3,3,3,Flat,N,Bedrock,Mud,2.9,557,9.49,10.61111111,8.81,8,22,Small rock along bank
+2/22/2017,Random,Mystery,112,R64,MY72,AB,AB,,4,6,6,5.333333333,0.15,362,109,5,4,4,6,Flat,N,Bedrock,Mud,3,557,9.49,10.61111111,8.81,8,22,Large rock along bank
+2/22/2017,Random,Mystery,112,R65,MY73,AB,AB,,4,6,6,5.333333333,0.15,362,109,6,4,4,3,Flat,N,Bedrock,Mud,4.8,557,9.49,10.61111111,8.81,8,22,Small rock along bank
+2/22/2017,Random,Mystery,112,R66,MY74,AB,AB,,4,6,6,5.333333333,0.15,362,109,3,2,2.5,3,Flat,N,Bedrock,Mud,4,557,9.49,10.61111111,8.81,8,22,Small rock along bank
+2/22/2017,Random,Mystery,112,R67,MY75,AB,AB,,4,6,6,5.333333333,0.15,362,109,1.5,1.5,1,1.5,Flat,N,Bedrock,Mud,4.9,557,9.49,10.61111111,8.81,8,22,Large rock in the middle of stream 
+2/22/2017,Random,Mystery,118,R68,MY76,AB,AB,,2,7,5,4.666666667,0.26,350,110,0.5,0.5,1,1,Flat,N,Cobble,Silt,5,559,10.16,10.55555556,8.7,15,58,Small rock in middle of stream
+2/22/2017,Random,Mystery,119,R69,MY77,AB,AB,,2,7,5,4.666666667,0.2,300,96,4,4,3,4,Flat,N,Cobble,Silt,5.9,559,10.16,10.55555556,8.7,15,58,Small rock in middle of stream
+2/22/2017,Random,Mystery,119,R70,MY78,AB,AB,,2,7,5,4.666666667,0.2,300,96,4,5,3,3.5,Flat,N,Cobble,Silt,6.2,559,10.16,10.55555556,8.7,15,58,Small rock in middle of stream
+2/22/2017,Random,Mystery,119,R71,MY79,AB,AB,,2,7,5,4.666666667,0.2,300,96,3,2,1,1,Flat,N,Cobble,Silt,6.9,559,10.16,10.55555556,8.7,15,58,Small rock in middle of stream
+2/22/2017,Random,Mystery,119,R74,MY82,AB,AB,,2,7,5,4.666666667,0.2,300,96,6,7,4,3,Flat,N,Cobble,Silt,7.2,559,10.16,10.55555556,8.7,15,58,Small rock in middle of stream
+2/22/2017,Random,Mystery,119,R75,MY83,AB,AB,,2,7,5,4.666666667,0.2,300,96,3,2,3,1,Flat,N,Cobble,Silt,9,559,10.16,10.55555556,8.7,15,58,Small rock in middle of stream
+2/22/2017,Random,Mystery,119,R76,MY84,AB,AB,,2,7,5,4.666666667,0.2,300,96,1,1,1,1,Flat,N,Cobble,Silt,10.5,559,10.16,10.55555556,8.7,15,58,Small rock in middle of stream
+2/22/2017,Random,Mystery,119,R77,MY85,AB,AB,,2,7,5,4.666666667,0.2,300,96,5,6,8,5,Flat,N,Cobble,Silt,14.2,559,10.16,10.55555556,8.7,15,58,Small rock in middle of stream
+2/22/2017,Random,Mystery,119,R78,MY86,AB,AB,,2,7,5,4.666666667,0.2,300,96,3,2,2,2,Flat,N,Cobble,Silt,17.3,559,10.16,10.55555556,8.7,15,58,Small rock in middle of stream
+2/22/2017,Random,Mystery,118,R79,MY87,AB,AB,,2,7,5,4.666666667,0.26,350,110,0.5,0.5,1,1,Flat,N,Cobble,Silt,17,559,10.16,10.55555556,8.7,15,58,Small rock in middle of stream
+4/18/2017,Random,Tom Moore,1,R10,,AB,AB,,7.4,12.6,9.9,9.966666667,0.16,470,62,2.6,2.2,3.4,3.9,Flat,N,Cobble,Cobble,0.7,559,9.45,12,8.8,90,65,Small rock in middle of stream
+4/18/2017,Random,Tom Moore,1,R11,,AB,AB,,7.4,12.6,9.9,9.966666667,0.16,470,62,3.4,2.4,2.8,2.1,Flat,N,Cobble,Cobble,0.7,559,9.45,12,8.8,90,65,Small rock in middle of stream
+4/18/2017,Random,Tom Moore,5,R13,,AB,AB,,2.5,5.4,3.1,3.666666667,0.09,385,75,1.9,3.7,1.6,2.9,Flat,N,Cobble,Bedrock,0.8,564.8,10.2,12.5,8.5,28,10,
+4/18/2017,Random,Tom Moore,5,R14,,AB,AB,,2.5,5.4,3.1,3.666666667,0.09,385,75,2.4,2.7,2.4,2.9,Flat,N,Cobble,Bedrock,0.8,564.8,10.2,12.5,8.5,28,10,
+4/18/2017,Random,Tom Moore,5,R15,,AB,AB,,2.5,5.4,3.1,3.666666667,0.09,385,75,2.3,2.9,3.3,1.4,Flat,Y,Cobble,Bedrock,0.6,564.8,10.2,12.5,8.5,28,10,
+4/18/2017,Random,Tom Moore,5,R16,,AB,AB,,2.5,5.4,3.1,3.666666667,0.09,385,75,6.8,7.4,8.5,8.8,Flat,N,Cobble,Bedrock,1.5,564.8,10.2,12.5,8.5,28,10,
+4/18/2017,Random,Tom Moore,5,R17,,AB,AB,,2.5,5.4,3.1,3.666666667,0.09,385,75,2.2,2.2,1.4,2.3,Flat,N,Cobble,Bedrock,1 .0,564.8,10.2,12.5,8.5,28,10,
+4/18/2017,Random,Tom Moore,5,R18,,AB,AB,,2.5,5.4,3.1,3.666666667,0.09,385,75,2.6,2.9,2.8,2.4,Flat,Y,Cobble,Bedrock,1..3,564.8,10.2,12.5,8.5,28,10,
+4/18/2017,Random,Tom Moore,5,R19,,AB,AB,,2.5,5.4,3.1,3.666666667,0.09,385,75,2.4,3.3,1.8,3.9,Flat,N,Cobble,Bedrock,1.3,564.8,10.2,12.5,8.5,28,10,
+4/18/2017,Random,Tom Moore,15,R20,,AB,AB,,22,26.5,18,22.16666667,0.19,275,257,3.8,2.8,4.7,2.1,Flat,N,Bedrock,Cobble,1 .0,567.5,11.82,14.11,8.01,90,10,Large rock in middle of stream
+4/18/2017,Random,Tom Moore,15,R21,,AB,AB,,22,26.5,18,22.16666667,0.19,275,257,6.8,5.9,4.9,6.3,Flat,N,Bedrock,Cobble,1.5,567.5,11.82,14.11,8.01,90,10,Large rock in middle of stream
+4/18/2017,Random,Tom Moore,15,R22,,AB,AB,,22,26.5,18,22.16666667,0.19,275,257,3.3,2.6,2.8,1.9,Flat,N,Bedrock,Cobble,1.5,567.5,11.82,14.11,8.01,90,10,Large rock in middle of stream
+4/18/2017,Random,Tom Moore,15,R23,,AB,AB,,22,26.5,18,22.16666667,0.19,275,257,4.3,2.2,2.4,4.4,Flat,N,Bedrock,Cobble,1 .0,567.5,11.82,14.11,8.01,90,10,Large rock in middle of stream
+4/18/2017,Random,Tom Moore,15,R24,,AB,AB,,22,26.5,18,22.16666667,0.19,275,257,3.1,4.3,3.3,2.2,Flat,N,Bedrock,Cobble,1.5,567.5,11.82,14.11,8.01,90,10,Large rock in middle of stream
+4/18/2017,Random,Tom Moore,15,R25,,AB,AB,,22,26.5,18,22.16666667,0.19,275,257,4.8,3.8,4.4,3.3,Flat,N,Bedrock,Cobble,1.6,567.5,11.82,14.11,8.01,90,10,Large rock in middle of stream
+4/18/2017,Random,Tom Moore,15,R26,,AB,AB,,22,26.5,18,22.16666667,0.19,275,257,8.1,7.8,7.3,6.9,Flat,N,Bedrock,Cobble,1.6,567.5,11.82,14.11,8.01,90,10,Large rock in middle of stream
+4/18/2017,Random,Tom Moore,32,R28,,AB,AB,,5,9.5,5,6.5,0.12,319,255,2,3,3.5,3.5,Flat,N,Bedrock,Silt,1.7,568.6,11.82,14.21,8.01,70,10,
+4/18/2017,Random,Tom Moore,32,R29,,AB,AB,,5,9.5,5,6.5,0.12,319,255,3,2,3.5,2,Flat,N,Bedrock,Silt,1,568.6,11.82,14.21,8.01,70,10,
+4/18/2017,Random,Tom Moore,32,R31,,AB,AB,,5,9.5,5,6.5,0.12,319,255,2,2,2.5,2.5,Flat,N,Bedrock,Silt,1.8,568.6,11.82,14.21,8.01,70,10,
+4/18/2017,Random,Tom Moore,32,R32,,AB,AB,,5,9.5,5,6.5,0.12,319,255,1.5,2,2.5,2,Flat,N,Bedrock,Silt,1.8,568.6,11.82,14.21,8.01,70,10,
+4/18/2017,Random,Tom Moore,32,R33,,AB,AB,,5,9.5,5,6.5,0.12,319,255,3,2,3,2.5,Flat,N,Bedrock,Silt,1.7,568.6,11.82,14.21,8.01,70,10,
+4/18/2017,Random,Tom Moore,32,R34,,AB,AB,,5,9.5,5,6.5,0.12,319,255,2.5,3.5,4,4,Flat,N,Bedrock,Silt,1.7,568.6,11.82,14.21,8.01,70,10,
+4/18/2017,Random,Tom Moore,32,R36,,AB,AB,,5,9.5,5,6.5,0.12,319,255,4,2.5,3,3,Flat,N,Bedrock,Silt,2,568.6,11.82,14.21,8.01,70,10,
+4/18/2017,Random,Tom Moore,32,R37,,AB,AB,,5,9.5,5,6.5,0.12,319,255,3,2.5,3,2.5,Flat,N,Bedrock,Silt,2.5,568.6,11.82,14.21,8.01,70,10,
+4/18/2017,Random,Tom Moore,32,R38,,AB,AB,,5,9.5,5,6.5,0.12,319,255,3,2.5,3.6,2,Flat,N,Bedrock,Silt,2.6,568.6,11.82,14.21,8.01,70,10,
+4/18/2017,Random,Tom Moore,32,R39,,AB,AB,,5,9.5,5,6.5,0.12,319,255,2,1.8,2.2,2.5,Flat,N,Bedrock,Silt,2.6,568.6,11.82,14.21,8.01,70,10,
+4/18/2017,Random,Tom Moore,32,R40,,AB,AB,,5,9.5,5,6.5,0.12,319,255,4,2.1,2.5,6,Flat,N,Bedrock,Silt,2.5,568.6,11.82,14.21,8.01,70,10,
+4/18/2017,Random,Tom Moore,42,R42,,AB,AB,,3,4.5,11,6.166666667,0.36,532,455,3,1.8,2,2,Flat,N,Bedrock,Pebble,2.7,535.1,11.85,14.12,7.95,35,20,
+4/18/2017,Random,Tom Moore,43,R53,,AB,AB,,6,2.5,5,4.5,0.36,532,455,3,3.4,2.2,1.4,Flat,N,Bedrock,Pebble,2.3,535.1,11.85,14.12,7.95,35,20,
+4/18/2017,Random,Tom Moore,43,R54,,AB,AB,,6,2.5,5,4.5,0.36,532,455,2,2.2,2.4,2,Flat,N,Bedrock,Pebble,2.3,535.1,11.85,14.12,7.95,35,20,
+4/18/2017,Random,Tom Moore,43,R55,,AB,AB,,6,2.5,5,4.5,0.36,532,455,1.8,1.6,2,1.5,Flat,N,Bedrock,Pebble,2.4,535.1,11.85,14.12,7.95,35,20,
+4/18/2017,Random,Tom Moore,43,R57,,AB,AB,,6,2.5,5,4.5,0.36,532,455,2,1.8,2,1.5,Flat,N,Bedrock,Pebble,2.5,535.1,11.85,14.12,7.95,35,20,
+4/18/2017,Random,Tom Moore,43,R58,,AB,AB,,6,2.5,5,4.5,0.36,532,455,2,3.4,2.5,1,Flat,N,Bedrock,Pebble,2.5,535.1,11.85,14.12,7.95,35,20,
+4/18/2017,Random,Tom Moore,43,R59,,AB,AB,,6,2.5,5,4.5,0.36,532,455,2.5,2,1.5,1.6,Flat,N,Bedrock,Pebble,2.6,535.1,11.85,14.12,7.95,35,20,
+4/18/2017,Random,Tom Moore,43,R60,,AB,AB,,6,2.5,5,4.5,0.36,532,455,1,2,2.5,1.7,Flat,N,Bedrock,Pebble,2.8,535.1,11.85,14.12,7.95,35,20,
+4/18/2017,Random,Tom Moore,43,R63,,AB,AB,,6,2.5,5,4.5,0.36,532,455,3,3.4,1.4,2,Flat,N,Bedrock,Pebble,2.7,535.1,11.85,14.12,7.95,35,20,
+4/19/2017,Random,Tom Moore,32,R41,,AB,AB,,5,9.5,5,6.5,0.12,319,255,3,2.2,3.2,1.6,Flat,N,Bedrock,Silt,0.5,568.6,11.82,14.21,8.01,70,10,
+4/19/2017,Random,Tom Moore,42,R43,,AB,AB,,3,4.5,11,6.166666667,0.36,532,455,2,1.5,2.2,1.6,Flat,N,Bedrock,Pebble,0.9,535.1,11.85,14.12,7.95,35,20,
+4/19/2017,Random,Tom Moore,49,R64,,AB,AB,,2.4,1.6,5.8,3.266666667,0.23,444,247,3,2.4,2.4,2.8,Flat,N,Bedrock,Pebble,0.9,603,11.22,13.89,8.05,68,46,
+4/19/2017,Random,Tom Moore,49,R65,,AB,AB,,2.4,1.6,5.8,3.266666667,0.23,444,247,2,1.8,1.4,2,Flat,N,Bedrock,Pebble,0.7,603,11.22,13.89,8.05,68,46,
+4/19/2017,Random,Tom Moore,49,R66,,AB,AB,,2.4,1.6,5.8,3.266666667,0.23,444,247,1.5,1.5,2,1.3,Flat,N,Bedrock,Pebble,0.7,603,11.22,13.89,8.05,68,46,
+4/19/2017,Random,Tom Moore,49,R68,,AB,AB,,2.4,1.6,5.8,3.266666667,0.23,444,247,2.5,1.8,1,3.4,Flat,N,Bedrock,Pebble,0.9,603,11.22,13.89,8.05,68,46,
+4/19/2017,Random,Tom Moore,49,R69,,AB,AB,,2.4,1.6,5.8,3.266666667,0.23,444,247,2.4,2.5,2.5,2.7,Flat,Y,Bedrock,Pebble,0.8,603,11.22,13.89,8.05,68,46,
+4/20/2017,Random,Tom Moore,42,R44,,AB,AB,,3,4.5,11,6.166666667,0.36,532,455,3,2.4,2,2.5,Flat,N,Bedrock,Pebble,0.9,535.1,11.85,14.12,7.95,35,20,
+4/21/2017,Random,Tom Moore,42,R45,,AB,AB,,3,4.5,11,6.166666667,0.36,532,455,2.5,2.4,2.8,2.3,Flat,N,Bedrock,Pebble,0.9,535.1,11.85,14.12,7.95,35,20,
+4/22/2017,Random,Tom Moore,42,R46,,AB,AB,,3,4.5,11,6.166666667,0.36,532,455,4.5,2.7,3,2.4,Flat,N,Bedrock,Pebble,0.6,535.1,11.85,14.12,7.95,35,20,
+4/23/2017,Random,Tom Moore,42,R47,,AB,AB,,3,4.5,11,6.166666667,0.36,532,455,6,5,4.8,4.5,Flat,N,Bedrock,Pebble,0.7,535.1,11.85,14.12,7.95,35,20,
+4/24/2017,Random,Tom Moore,42,R48,,AB,AB,,3,4.5,11,6.166666667,0.36,532,455,2,1.8,1.4,0.7,Flat,N,Bedrock,Pebble,0.8,535.1,11.85,14.12,7.95,35,20,
+4/25/2017,Random,Tom Moore,42,R49,,AB,AB,,3,4.5,11,6.166666667,0.36,532,455,2,2.5,2.7,2.4,Flat,N,Bedrock,Pebble,0.8,535.1,11.85,14.12,7.95,35,20,
+4/26/2017,Random,Tom Moore,42,R50,,AB,AB,,3,4.5,11,6.166666667,0.36,532,455,2.5,2,1.9,1.4,Flat,N,Bedrock,Pebble,0.9,535.1,11.85,14.12,7.95,35,20,
+4/27/2017,Random,Tom Moore,42,R51,,AB,AB,,3,4.5,11,6.166666667,0.36,532,455,2.5,2.6,1.5,1.3,Flat,N,Bedrock,Pebble,0.8,535.1,11.85,14.12,7.95,35,20,
+4/19/2017,Random,Tom Moore,59,R70,,AB,AB,,9.1,11.4,9.6,10.03333333,0.02,355,282,1.8,2.4,2.1,2.4,Flat,N,Bedrock,Pebble,0.8,602.3,11.55,13.92,8.08,74,90,
+4/19/2017,Random,Tom Moore,59,R71,,AB,AB,,9.1,11.4,9.6,10.03333333,0.02,355,282,1.8,2.8,3,2.6,Flat,N,Bedrock,Pebble,0.9,602.3,11.55,13.92,8.08,74,90,
+4/19/2017,Random,Tom Moore,58,R73,,AB,AB,,9.3,17.4,35.5,20.73333333,0.02,355,282,2.4,2.8,2.2,3.2,Flat,N,Bedrock,Silt,0.7,602.3,11.55,13.92,8.08,90,20,Pool
+4/19/2017,Random,Tom Moore,58,R74,,AB,AB,,9.3,17.4,35.5,20.73333333,0.02,355,282,1.5,3.5,2,3.2,Flat,N,Bedrock,Silt,0.8,602.3,11.55,13.92,8.08,90,20,Pool
+4/19/2017,Random,Tom Moore,58,R75,,AB,AB,,9.3,17.4,35.5,20.73333333,0.02,355,282,2.5,3.3,2.2,1.9,Flat,N,Bedrock,Silt,0.9,602.3,11.55,13.92,8.08,90,20,Pool
+4/19/2017,Random,Tom Moore,69,R81,,AB,AB,,11,12.5,13,12.16666667,0.2,378,217,1.6,2,2.3,1.9,Flat,N,Bedrock,Silt,1.4,601,12.14,13.84,8.1,25,7,Pool
+4/19/2017,Random,Tom Moore,78,R82,,AB,P,2 fish (85mm),6.6,8.1,0.4,5.033333333,0.01,537,360,2.4,1,2.3,1.2,Flat,N,Bedrock,Silt,1.5,601.6,11.35,13.88,8.04,17,2,
+4/19/2017,Random,Tom Moore,78,R83,,AB,P,2 fish (85mm),6.6,8.1,0.4,5.033333333,0.01,537,360,2.8,2.9,2,1.3,Flat,N,Bedrock,Silt,1,601.6,11.35,13.88,8.04,17,2,
+4/19/2017,Random,Tom Moore,78,R85,,AB,P,2 fish (85mm),6.6,8.1,0.4,5.033333333,0.01,537,360,0.6,1,1,0.5,Flat,N,Bedrock,Silt,1.6,601.6,11.35,13.88,8.04,17,2,
+4/19/2017,Random,Tom Moore,78,R87,,AB,P,2 fish (85mm),6.6,8.1,0.4,5.033333333,0.01,537,360,4.5,3.5,2,7,Flat,N,Bedrock,Silt,1.7,601.6,11.35,13.88,8.04,17,2,
+4/19/2017,Random,Tom Moore,78,R89,,AB,P,2 fish (85mm),6.6,8.1,0.4,5.033333333,0.01,537,360,2.5,3,2,2.4,Flat,N,Bedrock,Silt,1.2,601.6,11.35,13.88,8.04,17,2,
+4/19/2017,Random,Tom Moore,78,R90,,AB,P,2 fish (85mm),6.6,8.1,0.4,5.033333333,0.01,537,360,7,7.4,4.8,1.6,Flat,N,Bedrock,Silt,1.4,601.6,11.35,13.88,8.04,17,2,
+4/19/2017,Random,Tom Moore,78,R91,,AB,P,2 fish (85mm),6.6,8.1,0.4,5.033333333,0.01,537,360,2.6,2.4,2.5,2.5,Flat,N,Bedrock,Silt,1.3,601.6,11.35,13.88,8.04,17,2,
+4/19/2017,Random,Tom Moore,89,R93,,AB,P,3+ fish,32,37.5,37.5,35.66666667,0.01,506,382,6,7,5.5,4.5,Flat,N,Bedrock,Mud,1,608.7,11.45,13.85,8.1,90,34,
+4/19/2017,Random,Tom Moore,89,R94,,AB,P,3+ fish,32,37.5,37.5,35.66666667,0.01,506,382,4,4.9,5,3.8,Flat,N,Bedrock,Mud,1.5,608.7,11.45,13.85,8.1,90,34,
+4/19/2017,Random,Tom Moore,89,R100,,AB,P,3+ fish,32,37.5,37.5,35.66666667,0.01,506,382,4,5,5.2,4.1,Flat,N,Bedrock,Mud,1.5,608.7,11.45,13.85,8.1,90,34,
+4/19/2017,Random,Tom Moore,89,R101,,AB,P,3+ fish,32,37.5,37.5,35.66666667,0.01,506,382,2,2,3.2,2.2,Flat,N,Bedrock,Mud,1.4,608.7,11.45,13.85,8.1,90,34,
+4/19/2017,Random,Tom Moore,96,R102,,AB,AB,,6,4,1.9,3.966666667,0.06,272,168,1.5,2.4,3,2.3,Flat,N,Bedrock,Cobble,1.4,636.5,11.6,13.96,7.99,29,29,
+4/19/2017,Random,Tom Moore,96,R103,,AB,AB,,6,4,1.9,3.966666667,0.06,272,168,1.5,2.3,1.8,2,Flat,N,Bedrock,Cobble,1.3,636.5,11.6,13.96,7.99,29,29,
+4/19/2017,Random,Tom Moore,96,R104,,AB,AB,,6,4,1.9,3.966666667,0.06,272,168,2,1.4,2.6,2.4,Flat,N,Bedrock,Cobble,1.2,636.5,11.6,13.96,7.99,29,29,
+4/19/2017,Random,Tom Moore,96,R105,,AB,AB,,6,4,1.9,3.966666667,0.06,272,168,3.2,3.5,3,2,Flat,N,Bedrock,Cobble,1.2,636.5,11.6,13.96,7.99,29,29,
+4/19/2017,Random,Tom Moore,96,R106,,AB,AB,,6,4,1.9,3.966666667,0.06,272,168,2,2.5,3.2,2.8,Flat,N,Bedrock,Cobble,1.8,636.5,11.6,13.96,7.99,29,29,
+4/19/2017,Random,Tom Moore,96,R109,,AB,AB,,6,4,1.9,3.966666667,0.06,272,168,1,1.4,1.8,1.7,Flat,N,Bedrock,Cobble,1.5,636.5,11.6,13.96,7.99,29,29,
+4/19/2017,Random,Tom Moore,96,R110,,AB,AB,,6,4,1.9,3.966666667,0.06,272,168,1,1.8,1.5,1.4,Flat,N,Bedrock,Cobble,1.6,636.5,11.6,13.96,7.99,29,29,
+4/19/2017,Random,Tom Moore,96,R111,,AB,AB,,6,4,1.9,3.966666667,0.06,272,168,2,1,1.5,2.6,Flat,N,Bedrock,Cobble,2,636.5,11.6,13.96,7.99,29,29,
+4/19/2017,Random,Tom Moore,105,R112,,AB,AB,,23.5,49,34.5,35.66666667,0.01,324,281,1.8,2.6,2,3.5,Flat,N,Bedrock,Mud,2.5,640,11.64,13.94,7.82,90,90,Pool
+4/19/2017,Random,Tom Moore,105,R116,,AB,AB,,23.5,49,34.5,35.66666667,0.01,324,281,0.8,2.4,4,3.5,Flat,N,Bedrock,Mud,2.8,640,11.64,13.94,7.82,90,90,Pool
+4/19/2017,Random,Tom Moore,105,R118,,AB,AB,,23.5,49,34.5,35.66666667,0.01,324,281,1.7,2,1.8,2.1,Flat,N,Bedrock,Mud,2.7,640,11.64,13.94,7.82,90,90,Pool
+4/19/2017,Random,Tom Moore,105,R121,,AB,AB,,23.5,49,34.5,35.66666667,0.01,324,281,4,2.2,4.6,4.8,Flat,N,Bedrock,Mud,2.9,640,11.64,13.94,7.82,90,90,Pool
+4/19/2017,Random,Tom Moore,110,R123,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,1.2,1.6,0.7,1.4,Flat,N,Bedrock,Mud,2.2,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,110,R124,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,2.4,3,2.9,2.8,Flat,N,Bedrock,Mud,2.2,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,110,R125,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,1.6,2.5,1.5,1.7,Flat,N,Bedrock,Mud,2.4,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,110,R126,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,1.8,2.9,2.2,1.8,Flat,N,Bedrock,Mud,2.5,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,110,R127,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,3.5,3,2.4,2.6,Flat,N,Bedrock,Mud,2.6,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,110,R128,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,2.4,3.9,3,2.8,Flat,N,Bedrock,Mud,2,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,110,R129,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,3,3.5,3.2,2.4,Flat,N,Bedrock,Mud,2,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,110,R130,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,2.8,3.5,1.8,0.7,Flat,N,Bedrock,Mud,2.4,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,110,R131,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,1.4,1.6,1.4,0.5,Flat,N,Bedrock,Mud,2.4,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,110,R132,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,2,2.8,1,1.5,Flat,N,Bedrock,Mud,2.5,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,110,R133,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,2,1.4,1.5,1.9,Flat,N,Bedrock,Mud,2.6,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,110,R135,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,1.4,1.5,1.4,2,Flat,N,Bedrock,Mud,2.7,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,110,R136,,AB,P,"3 fish (110 mm, 85 mm x 2)",29,32,22.5,27.83333333,1.01,550,280,5.5,4,3.5,5.4,Flat,N,Bedrock,Mud,2.5,560,8.2,13.89,6.87,90,90,Undercut Pool
+4/19/2017,Random,Tom Moore,113,R138,,AB,AB,5 fish (No data),45,87,44,58.66666667,0.01,450,270,1,1.3,1.5,1,Flat,N,Cobble,Silt,2.5,641.5,11.05,13.92,7.74,90,90,"Pool, Undercut Banks"
+4/19/2017,Random,Tom Moore,113,R139,,AB,AB,5 fish (No data),45,87,44,58.66666667,0.01,450,270,2.8,2.4,2.5,1.8,Flat,N,Cobble,Silt,2.6,641.5,11.05,13.92,7.74,90,90,"Pool, Undercut Banks"
+4/19/2017,Random,Tom Moore,117,R142,,AB,AB,3 fish (No data),2,5,6,4.333333333,0.05,450,320,2,1.5,2.8,1.8,Flat,N,Bedrock,Mud,2.8,652,9.74,13.65,8.26,19,25,Pool
+4/19/2017,Random,Tom Moore,117,R142,,AB,AB,3 fish (No data),2,5,6,4.333333333,0.05,450,320,1.2,1.2,1.8,1,Flat,N,Bedrock,Mud,4.5,652,9.74,13.65,8.26,19,25,Pool
+4/19/2017,Random,Tom Moore,117,R142,,AB,AB,3 fish (No data),2,5,6,4.333333333,0.05,450,320,1.8,2.2,2.2,1.8,Flat,N,Bedrock,Mud,4.7,652,9.74,13.65,8.26,19,25,Pool
+4/19/2017,Random,Tom Moore,134,R147,,AB,AB,,5,6.5,5.5,5.666666667,0.01,490,115,6.4,4.8,7,5.8,Flat,N,Bedrock,Mud,6.5,625.6,11.1,13.93,7.54,33,38,Pool
+4/19/2017,Random,Tom Moore,134,R147,,AB,AB,,5,6.5,5.5,5.666666667,0.01,490,115,1.8,2.2,2.4,1.5,Flat,N,Bedrock,Mud,6,625.6,11.1,13.93,7.54,33,38,Pool
+4/19/2017,Random,Tom Moore,135,R152,,AB,AB,,5,6.5,5.5,5.666666667,0.15,490,115,1.8,3.2,4.2,3.5,Flat,N,Bedrock,Pebble,6,625.6,11.1,13.93,7.54,25,17,Riffle
+4/19/2017,Random,Tom Moore,135,R152,,AB,AB,,5,6.5,5.5,5.666666667,0.15,490,115,2.7,2.5,5.2,2,Flat,N,Bedrock,Pebble,9.4,625.6,11.1,13.93,7.54,25,17,Riffle
+4/19/2017,Random,Tom Moore,135,R152,,AB,AB,,5,6.5,5.5,5.666666667,0.15,490,115,7,4.5,6.6,3.4,Flat,N,Bedrock,Pebble,9.2,625.6,11.1,13.93,7.54,25,17,Riffle
+4/19/2017,Random,Tom Moore,SP,R157,,AB,P,"2 fish (85mm, 79mm}",6.5,9.4,10.4,8.766666667,0.13,197,138,10.5,11.4,7.6,10.2,Flat,N,Bedrock,Cobble,9.3,559.3,11.75,13.63,8.11,50,16,Lower side streem
+4/19/2017,Random,Tom Moore,SP,R157,,AB,P,"2 fish (85mm, 79mm}",6.5,9.4,10.4,8.766666667,0.13,197,138,8.9,11.9,9.8,13.4,Flat,N,Bedrock,Cobble,9.5,559.3,11.75,13.63,8.11,50,16,Lower side streem
+4/19/2017,Random,Tom Moore,SP,R160,,AB,AB,,19,15,10,14.66666667,0.01,419,224,1.3,2.6,1.6,2.7,Flat,N,Bedrock,Silt,9.6,562.9,11.56,13.56,7.75,45,12,Upper side stream
+4/19/2017,Random,Tom Moore,SP,R161,,AB,AB,,19,15,10,14.66666667,0.01,419,224,9.9,11.2,11.9,9.8,Flat,N,Bedrock,Silt,9.5,562.9,11.56,13.56,7.75,45,12,Upper side stream
+4/19/2017,Random,Tom Moore,SP,R163,,AB,AB,,18,25,21,21,0.05,455,343,4,3.9,2.7,2.5,Flat,N,Bedrock,Pebble,1,391,9.6,11.7,7.42,25,90,Extras
+4/19/2017,Random,Tom Moore,SP,R166,,AB,AB,,10,14,12,12.3,0.05,453,275,2.6,2.8,2.7,2.9,Flat,N,Bedrock,Pebble,0.9,390,8.25,11.85,7.5,5,90,Extras
