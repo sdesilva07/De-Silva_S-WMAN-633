@@ -1,0 +1,165 @@
+---
+title: "Homework 4"
+author: "Sindupa De Silva"
+date: "3/12/2021"
+output: html_document
+---
+
+
+Included in this homework is an example dataset with the following variables:
+  y: response variable (counts of the number of events)
+  x1: continuous predictor variable
+  x2: categorical predictor variable with 2 levels: "a" and "b"
+
+```{r}
+
+Data <- read.csv ('Homework 4 Data.csv')
+head(Data)
+
+```
+
+
+
+1. Fit a Poisson regression model that assumes expected count is an interactive function of variables x1 and x2.
+
+```{r}
+
+# Poisson regression model
+Fit <- glm(y ~ x1 * x2, family = poisson, data = Data)
+summary(Fit)
+
+```
+
+
+
+2. Interpret the effect of variable x1 on the expected count when x2 is fixed at level "b". Verify your interpretation in R.
+
+```{r}
+
+# Extract the coefficients 
+betas <- coef(Fit)
+
+# log expected count with variable x1 and x2 fixed at level "b"
+c_x1 <- betas[1] + betas[2] + betas[3] + betas[4]
+
+# Multiply the x1 effect by 1-unit change
+c_x1A <- betas[1] + betas[2] * 1 + betas[3] + betas[4] * 1
+
+c_x1B <- betas[1] + betas[2] * 2 + betas[3] + betas[4] * 2
+
+# For 1-unit change in x1
+c_x1B - c_x1A ; log(exp(c_x1B)/ exp(c_x1A))
+
+# Assess proportional change in expected count
+exp(c_x1B)/ exp(c_x1A)
+
+# This can be interpretted as:
+((exp(c_x1B)/ exp(c_x1A)) - 1) * 100
+
+
+```
+- This shows that there is a 46.1% change in expected count with 1-unit change variable x1, when variable x2 is fixed at level "b".
+
+
+
+3. Interpret the effect of variable x2 on the expected count when x1 is fixed at 1. Verify your interpretation in R.
+
+```{r}
+
+# log expected count of variable x2 fixed at level "b"
+c_x2B <- betas[1] + betas[2] + betas[3] + betas[4]
+
+c_x2A <- betas[1] + betas[2]
+
+# For 1-unit change in x2
+c_x2B - c_x2A ; log(exp(c_x2B)/ exp(c_x2A))
+
+# Assess proportional change
+exp(c_x2B)/ exp(c_x2A)
+
+# This can be interpretted as:
+((exp(c_x2B)/ exp(c_x2A)) - 1) * 100
+
+```
+- This shows that there is a -43.3% change in expected count when variable x2 changes between levels "a" and "b", with variable x1 fixed at 1.
+
+
+
+4. Predict the expected count, ± 95% confidence intervals, over the observed range of values of x1, assuming x2 is fixed at level "b".
+
+```{r}
+
+# create vectors of the data
+# Vector of x1 values
+x1 <- seq(min(Data$x1), max(Data$x1), length.out = 100)
+
+# vector of x2 values fixed at b
+x2 <- factor(x = rep('b', times = 100),levels = c('a','b'))
+
+# Combine the data into new data frame
+new.data <- data.frame(x1 = x1, x2 = x2)
+
+# Predict values
+Pred <- predict.glm(Fit, new.data, type = 'link', se.fit = T)
+
+# Calculate the low limits of our 95% confidence interval
+exp(Pred$fit + qnorm(0.025) * Pred$se.fit)
+
+# Calculate the high limits of our 95% confidence interval
+exp(Pred$fit + qnorm(0.975) * Pred$se.fit)
+
+# visualizing the predicted values with the high and low confidence intervals
+
+low <- exp(Pred$fit + qnorm(0.025) * Pred$se.fit)
+high <- exp(Pred$fit + qnorm(0.975) * Pred$se.fit)
+
+plot(y = exp(Pred$fit), x = new.data$x1, xlab = 'x1',
+     ylab = 'Expected count', cex.axis = 1.5, cex.lab = 1.5,
+     ylim = c(min(low), max(high)), type = 'l')
+lines(x = new.data$x1, y = low, lty = 2) 
+lines(x = new.data$x1, y = high, lty = 2)
+```
+
+
+
+5. Predict the expected count, ± 95% confidence intervals, of levels "a" and "b", assuming x1 is fixed at it’s mean.
+
+```{r}
+
+# create vectors of the data
+# vector of x2 values of levels "a" and "b"
+x2 <- factor(x = Data$x2,levels = c('a','b'))
+
+# Vector of x1 values fixed at its mean
+x1 <- seq(min(mean(Data$x1)), max(mean(Data$x1)), length.out = 100)
+
+# Combine the data into new data frame
+new.data <- data.frame(x1 = x1, x2 = x2)
+
+# Predict values
+Pred <- predict.glm(Fit, new.data, type = 'link', se.fit = T)
+
+# Calculate the low limits of our 95% confidence interval
+exp(Pred$fit + qnorm(0.025) * Pred$se.fit)
+
+# Calculate the high limits of our 95% confidence interval
+exp(Pred$fit + qnorm(0.975) * Pred$se.fit)
+
+# visualizing the predicted values with the high and low confidence intervals
+
+low <- exp(Pred$fit + qnorm(0.025) * Pred$se.fit)
+high <- exp(Pred$fit + qnorm(0.975) * Pred$se.fit)
+
+plot(y = exp(Pred$fit), x = new.data$x2, xlab = 'x2 (a/b)',
+     ylab = 'Expected count', cex.axis = 1.5, cex.lab = 1.5,
+     ylim = c(min(low), max(high)), type = 'l')
+lines(x = new.data$x2, y = low, lty = 2) 
+lines(x = new.data$x2, y = high, lty = 2)
+
+# I have no idea why this plot is doing this?? Send.Help.
+
+```
+
+
+
+
