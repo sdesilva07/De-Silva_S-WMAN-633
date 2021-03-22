@@ -1,0 +1,177 @@
+---
+title: "De Silva_Exam 2"
+author: "Sindupa De Silva"
+date: "March 22, 2021"
+output: html_document
+---
+
+
+Included with this exam is a dataset called “Exam 2 Data.csv”, with the following variables:
+y: count of events
+x1: predictor variable, continuous
+x2: predictor variable, continuous
+x3: categorical variable with 3 levels: "a", "b", and "c"
+
+
+1. Import this dataset into R and inspect the first several rows of your data
+```{r}
+
+Data <- read.csv('Exam 2 Data.csv')
+head(Data)
+
+```
+
+
+
+2. Fit a Poisson model that assumes your response is a function of x1, x2, and x3. Include an interaction
+between x1 and x2 only (i.e., do not include an interaction between your categorical variables and any
+other variables).
+```{r}
+
+Fit <- glm(y ~ x1 * x2 + x3, family = poisson, data = Data)
+summary(Fit)
+
+```
+
+
+3. Interpret the effect of variable x1 when x2 = -1
+
+```{r}
+
+
+# Extract the coefficients
+betas <- coef(Fit)
+
+# model for x1 when x2 = -1
+betas[2] + betas[6] * -1
+
+```
+Variable x1 has an effect of -0.75 on the log odds of success, for every 1-unit increase when x2 = -1.
+
+
+4. Plot expected counts ±90% confidence intervals over the observed range of variable x1. Assume variable
+when x2 = -1 and category "a".
+```{r}
+
+# create vectors of the data
+# vector of x1 values
+x1 <- seq(min(Data$x1), max(Data$x1), length.out = 100)
+
+# x2 fixed at -1
+x2 = -1
+
+# vector of x2 values fixed at -1
+x3 <- factor('a', levels = c('a', 'b', 'c'))
+
+# Create a new data frame with all three variables
+new.data <- data.frame(x1 = x1, x2 = x2, x3 = x3)
+
+# Predict the new range of values
+Pred <- predict.glm(Fit, new.data, type = 'link', se.fit = T)
+
+# Calculate the low limits of our 95% confidence interval
+low <- exp(Pred$fit + qnorm(0.025) * Pred$se.fit)
+low
+
+# Calculate the high limits of our 95% confidence interval
+high <- exp(Pred$fit + qnorm(0.975) * Pred$se.fit)
+high
+
+# visualizing the predicted values with the high and low confidence intervals
+plot(y = exp(Pred$fit), x = new.data$x1, xlab = 'x1',
+     ylab = 'Expected count', cex.axis = 1.5, cex.lab = 1.5,
+     ylim = c(min(low), max(high)), type = 'l')
+lines(x = new.data$x1, y = low, lty = 2) 
+lines(x = new.data$x1, y = high, lty = 2)
+
+```
+
+
+
+5. Interpret the effect of variable x3
+```{r}
+
+# Retrieve model coeficients
+summary (Fit)
+
+```
+Within the categorical variable x3, the difference in log odds between the three levels "a, b and c" are;
+levels "b" and "a" =  0.375
+levels "c" and "a" = -0.884
+
+
+6. Use contrasts to evaluate the null hypothesis that the difference in log expected count between levels
+"b" and "c" = 0. Fix x1 and x2 at their means.
+```{r}
+
+# Create vectors of x1 and x2 fixed at their mean
+# x1 <- seq(min(mean(Data$x1)), max(mean(Data$x1)), length.out = 100)
+# x2 <- seq(min(mean(Data$x2)), max(mean(Data$x2)), length.out = 100)
+# x3 <- Data$x3
+# y  <- Data$y
+# new.data <- data.frame(y = y, x1 = x1, x2 = x2 , x3 = x3)
+
+# Run new model
+# fit <- glm(y ~ x1 * x2 + x3, family = poisson, data = new.data)
+# summary(fit)
+# betas <- coef(fit)
+
+
+# Tried doing this above, and then switched to this route..
+
+library(multcomp)
+# create a contrast matrix
+x <- matrix(c(0, 0, 0, 1, 1, 0), nrow = 1) # Contrast matrix
+
+cnt <- glht(Fit, x)
+summary(cnt, test = adjusted('none'))
+
+```
+
+
+
+7. Derive the test statistic and p-value associated with the interaction between x1 and x2. What is the
+null hypothesis? Do we reject or fail to reject this null hypothesis? Defend your answer.
+```{r}
+
+# Standard error
+Std.e <- summary(Fit)[['coefficients']][, 2]
+
+# test statistic
+betas[6] / Std.e[6]
+
+# p-value
+pnorm(-1 * abs(betas[6] / Std.e[6])) * 2
+
+
+```
+For the interaction of x1 and x2 The null hypothesis is β6 = 0. Based on the derived p-value (<0.05) we reject the null hypothesis, therefore we can say there is evidence that the effect of variable x1 depends on the level of x2.
+
+
+
+
+8. Assume you have the following realizations of random variable Y : y = (1, 0)
+Further assume realizations of the random variable Y are Bernoulli distributed: y ∼ Bernoulli(p).
+What is the probability of observing each of these random variables assuming the log odds of success = -2?
+```{r}
+
+dpois(c(1,0), plogis(-2))
+
+```
+
+
+
+
+9. What is the "support" of a Bernoulli random variable? What are the acceptable values of it’s sole
+parameter? To which quantity do we apply a link function, and why do we do this? 
+What is the principle link function we use in binomial (i.e., logistic) regression, and what it it’s inverse function?
+
+
+Bernoulli random variables represent values of "0" or "1", and we apply the link function to the values of the variable itself because it allows us to transform and bind the "0" and "1" values into the real number line. Log() and  exp().
+
+
+10. What is a fundamental assumption we make to derive inference when comparing two levels of a
+categorical random variable?
+
+
+We assume that the linear combination of the variables are gaussian.
