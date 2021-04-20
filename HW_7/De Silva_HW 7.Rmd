@@ -1,0 +1,191 @@
+---
+title: "De Silva_HW7"
+author: "Sindupa De Silva"
+date: "4/15/2021"
+output: html_document
+---
+
+
+Included in this homework is the same bobcat occupancy modeling dataset from homework 5:
+
+*Bobcat.csv*: detection / non-detection of bobcat at each camera. Each row is a camera, and each column is a replicate survey (1 day).
+
+*p covariates.csv*: number of people (divided by 100) photographed. Each row is a camera, and each column is a replicate survey (1 day). This is a detection covariate.
+
+*psi covariates.csv*: the single covariate represents the proportion of area within 5km recently disturbed (e.g., logging, housing development). Treat this as a site-level covariate.
+
+
+1. Load data and place into an unmarkedFrameOccu object
+
+```{r}
+
+library(unmarked)
+library(AICcmodavg)
+
+# Import data
+Bobcats <- read.csv('Bobcat.csv') # detection/ non-detection
+Cameras <- read.csv('p covariates.csv') # detection covariate
+Disturbance <- read.csv('psi covariates.csv') # site-level covariate
+
+# Create a list of site-level covariates
+People <- list(People = Cameras)
+#Disturbance <- list(Dist = data.frame(factor(Disturbance_1)))
+
+# Place the data into an unmarkedFrameOccu object
+Occu_data <- unmarkedFrameOccu(y = as.matrix(Bobcats), # detection / non-detection
+                                 siteCovs = Disturbance, # site-level covariate
+                                 obsCovs = People) # detection covariate
+
+```
+
+
+2. Fit the following candidate set of models:
+
+```{r}
+
+# Making a list of distinct candidate models
+
+# Detection model = Intercept-only, Occupancy model = Intercept-only
+Fit_1 <- occu(~ 1 ~ 1, data = Occu_data)
+
+# Detection model = People, Occupancy model = Intercept-only
+Fit_2 <- occu(~ People ~ 1, data = Occu_data)
+
+# Detection model = Intercept-only, Occupancy model = disturbance
+Fit_3 <- occu(~ 1 ~ Dist_5km, data = Occu_data)
+
+# Detection model = People,  Occupancy model = disturbance
+Fit_4 <- occu(~ People ~ Dist_5km, data = Occu_data)
+
+```
+
+
+
+3. Perform model selection with AIC. What is your top model? How do you know? Is there model selection uncertainty?
+
+```{r}
+
+# Create a list of all model outputs
+All_models <- list(
+  P1 = Fit_1, P2 = Fit_2, P3 = Fit_3, P4 = Fit_4)
+
+# AIC scores for all models
+AIC_score <- aictab(cand.set = All_models, second.ord = F)
+head(AIC_score)
+
+```
+* Looking at the AIC scores for each model, the top model is P3 (Fit_3).
+* This is because it has the lowest AIC score, which shows that model P3 has a better approximation of the data-generating process.
+* There is model selection uncertainity, because model P3 and P4 have a difference in AIC that is < 2. Therefore, model averages need to be calculated for these two models. 
+
+
+4. Average both the effect of people on detection, and disturbance on occupancy, over all models. Report model-averaged slope coefficients and 95% confidence intervals.
+
+```{r}
+
+# Order of models, lowest AIC to greatest AIC
+AIC_score$Modnames
+
+# Extract model weights from AIC table
+Model_weights <- (AIC_score$AICWt)[1:4]
+Model_weights
+
+# From all models for: Disturbance on occupancy
+Disturb_coefs <- c(coef(Fit_3)[2], coef(Fit_4)[2], 0, 0)
+Disturb_coefs
+
+# From models for: People on detection
+Detect_coefs <- c(0, coef(Fit_4)[4], 0, coef(Fit_2)[3])
+Detect_coefs
+
+# Calculate model averages
+Disturb_Model_avg <- sum(Model_weights * Disturb_coefs)
+Detect_Model_avg <- sum(Model_weights * Detect_coefs)
+
+# Or using the modavgShrink() function
+Disturb_Shrink <- modavgShrink(cand.set = All_models, parm = 'Dist_5km', second.ord = F, parm.type = 'psi')
+People_Shrink <- modavgShrink(cand.set = All_models, parm = 'People', second.ord = F, parm.type = 'detect')
+
+# Compare model averages for people on detection, and disturbance on occupancy using two methods
+Disturb_Model_avg; Disturb_Shrink$Mod.avg.beta
+Detect_Model_avg; People_Shrink$Mod.avg.beta
+
+# Calculate 95% confidence intervals
+
+# Occupancy models
+# Low 95%
+Disturb_Model_avg - qnorm(0.975) * (Disturb_Shrink$Uncond.SE)
+# High 95%
+Disturb_Model_avg + qnorm(0.975) * (Disturb_Shrink$Uncond.SE)
+# Confirm
+Disturb_Shrink$Lower.CL
+# Confirm
+Disturb_Shrink$Upper.CL
+
+#Detection models
+# Low 95%
+Detect_Model_avg - qnorm(0.975) * (People_Shrink$Uncond.SE)
+# High 95%
+Detect_Model_avg + qnorm(0.975) * (People_Shrink$Uncond.SE)
+# Confirm
+People_Shrink$Lower.CL
+# Confirm
+People_Shrink$Upper.CL
+
+
+# Or this way:
+Coef_Conf <- data.frame(
+Variable = c("Dist_5km", "People"),
+Model = c("Occupancy", "Detection"),
+Estimate = c(Disturb_Shrink$Mod.avg.beta, People_Shrink$Mod.avg.beta),
+Low95CI = c(Disturb_Shrink$Lower.CL, People_Shrink$Lower.CL),
+Upp95CI = c(Disturb_Shrink$Upper.CL, People_Shrink$Upper.CL)
+)
+
+Coef_Conf
+```
+
+
+
+5. Obtain and plot model-averaged predictions of occupancy probability and detection probability. Average over all models, and make predictions over the observed range of each variable.
+
+```{r}
+
+# Predictions
+
+# Occupancy Model
+Disturb_data <-  data.frame(
+    Dist_5km = seq(min(Disturbance$Dist_5km), max(Disturbance$Dist_5km), length.out = 100))
+
+Disturb_pred <- modavgPred(cand.set = All_models, newdata = Disturb_data, second.ord = F, parm.type = 'psi')
+
+# Detection model
+People_data <-  data.frame(
+    People = seq(min(Cameras, na.rm = T), max(Cameras, na.rm = T), length.out = 100))
+
+People_pred <- modavgPred(cand.set = All_models, newdata = People_data, second.ord = F, parm.type = 'detect')
+
+```
+
+
+```{r}
+
+# Plot Occupancy model
+plot(x = Disturb_data$Dist_5km, y = Disturb_pred$mod.avg.pred, type = 'l', 
+     xlab = "Occupancy probability", ylab = "Disturbance" )
+lines(x = Disturb_data$Dist_5km, y = Disturb_pred$lower.CL, lty = 2)
+lines(x = Disturb_data$Dist_5km, y = Disturb_pred$upper.CL, lty = 2)
+
+```
+
+
+```{r}
+
+# Plot Detection model
+plot(x = People_data$People, y = People_pred$mod.avg.pred, type = 'l',  
+     xlab = "People detected at sites", ylab = "Detection probability", ylim = c(min(People_pred$lower.CL), max(People_pred$upper.CL)))
+lines(x = People_data$People, y = People_pred$lower.CL, lty = 2)
+lines(x = People_data$People, y = People_pred$upper.CL, lty = 2)
+
+```
+
