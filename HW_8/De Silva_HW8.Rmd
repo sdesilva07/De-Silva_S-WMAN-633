@@ -1,0 +1,123 @@
+---
+title: "De Silva_HW8"
+author: "Sindupa De Silva"
+date: "4/20/2021"
+output: html_document
+---
+
+Included in this homework is the same N-mixture modeling dataset introduced in class:
+
+*sosp_nmix.csv*: counts of song sparrow at each survey. Each row is a site, and each column is a
+replicate survey.
+
+*p_covs_nmix.csv*: detection-level covariates recorded at each survey. Each row is a site, and each
+column is a replicate survey (1 day). xxx.1 represents covariate xxx recorded at survey 1, and xxx.2
+represents covariate xxx recorded at survey 2. For this exercise, we will use variables time (hours past
+midnight that the survey started) and sky (0 = clear skies; 1 = partly cloudy; 2 = overcast; 4 =
+precipitation).
+
+*n_covs_nmix.csv*: site-level covariates. Defined in the N-Mixture Models lecture, slide 34. For this
+exercise, we will use size (wetland size in ha) and type (acep = Agricultural Conservation Easement
+Program wetland; reference = Reference Wetland)
+
+
+1. Fit an N-mixture model that assumes abundance is a function of wetland size and type, and detection
+probability is a function of sky and time (5 points).
+
+```{r}
+library(unmarked)
+library(multcomp)
+
+# Load data
+sosp_mat <- read.csv("sosp_nmix.csv") # count data - detection / non-detection
+p_covs <- read.csv('p_covs_nmix.csv') # detection covariates
+site_covs <- read.csv('n_covs_nmix.csv') # site level covariates
+
+# Convert data into matrix
+count <- as.matrix(sosp_mat)
+
+# Create a list of the detection covariates
+det_covs <- list(
+  time = data.frame(p_covs[, c('time.1', 'time.2')]),
+  sky = data.frame(sky.1 = factor(p_covs$sky.1),
+                   sky.2 = factor(p_covs$sky.2)))
+
+# Place covariates into unmarkedFramePCount object:
+nmix <- unmarkedFramePCount(y = count, # detection / non-detection
+                                 siteCovs = site_covs, # site-level covs
+                                 obsCovs = det_covs) # detection covariates
+
+# Fit N-mixture model
+Fit_Nmix <- pcount(formula = ~ time + sky ~ size + type, data = nmix, K = 100)
+summary(Fit_Nmix)
+
+```
+
+
+2. Write a function that calculates the sum of squared Pearson residuals from a fitted model.
+
+```{r}
+
+# obtaining expected abundance (lambda)
+fitted_lambda <- predict(Fit_Nmix, type = 'state')
+
+# obtaining detection probability (p_ij)
+fitted_pij <- predict(Fit_Nmix, type = 'det')
+
+# Create matrix of predicted detection estimates
+pij_mat <- matrix(fitted_pij$Predicted, byrow = T, ncol = 2)
+
+# lambda * p_ij
+lambda_pij <- matrix(fitted_lambda$Predicted * fitted_pij$Predicted, byrow = T, ncol = 2)
+
+# Pearson chi-squared statistic
+chisq_test <- sum((count - lambda_pij) ^ 2 /
+(lambda_pij * (1 - (pij_mat))))
+chisq_test
+
+# Create a function to calculate the sum of Squared Pearson residuals (Chi square test statistic)
+chisq <- function(Fit_Nmix){
+obs <- getY(Fit_Nmix@data) # observed
+ex <- fitted(Fit_Nmix)# expected
+fitted_pij <- predict(Fit_Nmix, type = 'det') # detection probability
+pij_mat <- matrix(fitted_pij$Predicted, byrow = T, ncol = 2) # matrix of detection probability
+ts <- (ex - obs) ^ 2 / (ex * (1 - pij_mat)) # test statistic
+return(sum(ts))
+}
+chisq(Fit_Nmix)
+
+```
+
+
+
+3. Use the parboot() function in R to simulate the distribution of this test statistic under the assumption that your fitted model is the data-generating model. Simulate 1000 values of the test statistic. Note that this may take several minutes (5 points).
+
+```{r}
+
+# Simulate the distribution of this test statistic over 1000 values
+sims <- parboot(object = Fit_Nmix, statistic = chisq, nsim = 1000)
+
+
+```
+
+
+
+4. Plot the distribution of the simulated test statistic. Include in this plot the value of your test statistic calculated from your fitted model. What is the null hypothesis you are testing when conducting model checking? Do you reject or fail to reject this null hypothesis? What are the implications for how well you model fits the data (5 points)?
+
+```{r}
+
+# Plot the distribution of the previously simulated test statistic alongside the test statistic of Fit_Nmix model
+hist(sims@t.star[, 1], xlab = 'Chi square value', xlim = c(0, 1200),
+main = 'Distribution of test statistic',
+cex.axis = 1.5, cex.lab = 1.5, cex.main = 1.5)
+lines(x = rep(chisq(Fit_Nmix), 2),
+y = c(0, 1000),
+col = 'red', lwd = 3)
+
+# Obtain p-values from the observed and simulated test statistic
+sum(sims@t.star[, 1] > chisq(Fit_Nmix)) / 1000
+
+```
+
+For these model checking calculations, we are evaluating the null hypothesis that our fitted N-mixture model is the data-generating model compared to the simulated model. Based on the calculated p-value = 0, we reject this null hypothesis. This is further assured by how far the model's chi square test statistic falls in comparison to the simulated test statistic. Based on these outputs, the current fitted model may need to be modified, such as switching or transforming the covariates. Trying mixed-effects Or, it may require a different model besides N-mixture models. 
+
