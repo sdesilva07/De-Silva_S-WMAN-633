@@ -1,0 +1,228 @@
+---
+title: "De Silva_Exam 3"
+author: "Sindupa De Silva"
+date: "5/4/2021"
+output: html_document
+---
+
+
+Included with this exam is an example occupancy modeling dataset:
+detect.csv: detection / non-detection data
+sitecovs.csv: site-level covariates (1 covariate per column)
+obscovs1.csv: observation-level covariates
+obscovs2.csv: observation-level covariates
+
+```{r}
+
+# Load packages
+library(unmarked)
+library(AICcmodavg)
+library(mvtnorm)
+
+```
+
+
+```{r}
+
+# Import data
+detect <- read.csv('detect.csv') # detection / non-detection
+obs_covs1 <- read.csv('obscovs1.csv') # observation covariates
+obs_covs2 <- read.csv('obscovs2.csv') # observation covariates
+site_covs <- read.csv('sitecovs.csv') # site level covariates
+
+```
+
+
+
+1. Describe a sampling procedure that may have given rise to this dataset:
+
+* To acquire this dataset, 100 sites were sampled (N = 100) and at each site 3 replicate surveys were conducted (J = 3). During each replicate survey, detection/ non-detection was recorded (I)
+
+
+
+2. Import data and fit an occupancy model that assumes detection probability is an additive function of obscovs1 and obscovs2; and that occupancy probability is an additive function of x1 and x2.
+```{r}
+
+# Categorical covariates are already dummy coded
+
+# Create a list of the detection covariates
+det_covs <- list(obscovs1 = obs_covs1, obscovs2 = obs_covs2)
+
+# Place covariates into an unmarkedFrameOccu object
+occu_data <- unmarkedFrameOccu(y = as.matrix(detect), # detection / non-detection
+                                 siteCovs = site_covs, # site-level covariates
+                                obsCovs = det_covs) # detection covariates
+
+# Fit Occupancy model
+Fit_occu <- occu(formula = ~ obscovs1 + obscovs2 ~ x1 + x2, data = occu_data)
+summary(Fit_occu)
+
+```
+
+
+3. Use contrasts to determine if occupancy probability is different when x1 = 2 vs. when x1 = -2?
+```{r}
+
+# Extract coefficients
+betas <- coef(Fit_occu)
+betas
+
+# Create contrast matrix
+x <- matrix(
+  c(0, 2, 0,
+    0, -2, 0),
+  nrow = 2, byrow = T)
+x
+
+# linearcomb function
+lin_com <- linearComb(obj = Fit_occu, coefficients = x, type = 'det')
+
+# Wald test/ Test-statistic
+w <- coef(lin_com) / SE(lin_com)
+
+# Calculating p-values to test null hypothesis
+2 * pnorm(-1 * abs(w))
+
+```
+At an alpha value of 0.05, the calculated p-values for when x = 2 and x = -2 were > 0.05, therefore we fail to reject the null hypothesis that there is a difference in occupancy probability when x is equal to 2 or -2.
+
+
+
+4. Use model selection to compare the following 4 models. Which model is the "top" model? How do you
+know?
+(a) ~ obscovs1 + obscovs2 ~ x1 + x2
+(b) ~ obscovs1 + obscovs2 ~ x1
+(c) ~ obscovs1 + obscovs2 ~ x2
+(d) ~ obscovs1 + obscovs2 ~ 1
+```{r}
+
+# Create the candidate models
+Fit_1 <- Fit_occu
+Fit_2 <- occu(formula = ~ obscovs1 + obscovs2 ~ x1, data = occu_data)
+Fit_3 <- occu(formula = ~ obscovs1 + obscovs2 ~ x2, data = occu_data)
+Fit_4 <- occu(formula = ~ obscovs1 + obscovs2 ~ 1, data = occu_data)
+
+# Create a list of the candidate models
+cand.set <- list(
+  P1 = Fit_1, P2 = Fit_2, P3 = Fit_3, P4 = Fit_4) 
+
+# Model selection using Akaike's Information Criterion (AIC scores)
+AICmods <- aictab(cand.set = cand.set, second.ord = F)
+head(AICmods)
+
+```
+Based on this AIC model selection output, Fit_3 (~ obscovs1 + obscovs2 ~ x2) is the top model because it has the lowest AIC score of 0.00. However, Fit_1 (~ obscovs1 + obscovs2 ~ x1 + x2) is a close competitor because it has an AIC score difference of < 2 (Burnham and Anderson).
+
+
+
+5. Obtain model-averaged estimates of x1. What conclusions do you draw regarding this variable?
+```{r}
+
+# Model-averaged estimates using the modavgShrink function
+modavgShrink(cand.set = cand.set, parm = 'x1', second.ord = F, parm.type = 'psi')
+
+```
+Model averaged confidence intervals do not overlap 0, therefore we can conclude that coefficient "x1" has a non-zero influence on occupancy probability.
+
+
+
+6. Plot model-averaged predictions of how detection probability changes across the observed range of
+obscovs2.
+```{r}
+
+# New data frame
+new_data <- data.frame(
+  obscovs2 = seq(from = min(obs_covs2), to = max(obs_covs2), length.out = 100),
+  obscovs1 = rep(0, 100))
+  
+# Model-averaged predictions
+obscovs2_pred <- modavgPred(cand.set, newdata = new_data, second.ord = T, parm.type = 'detect')
+
+# Plot the predicted values
+plot(x = new_data$obscovs2, y = obscovs2_pred$mod.avg.pred, type = "l", xlab = "Obscovs2", ylab = "Detection probability", ylim = c(min(obscovs2_pred$lower.CL), max(obscovs2_pred$upper.CL)))
+lines(x = new_data$obscovs2, y = obscovs2_pred$lower.CL, lty = 2)
+lines(x = new_data$obscovs2, y = obscovs2_pred$upper.CL, lty = 2)
+
+```
+
+
+7. Evaluate the fit of the top model using the sum of squared Pearson’s residuals as a test statistic. A function for evaluating this test statistic is provided at the bottom of the exam.
+```{r}
+
+# Calculate Chi Squared Test Statistic
+chisq <- function(Fit_3){ # mod is fitted model
+obs <- getY(Fit_3@data) # observed
+ex <- fitted(Fit_3) # expected
+ts <- (ex - obs) ^ 2 / # chi-square statistic
+(ex * (1 - ex))
+return(sum(ts))
+}
+chisq(Fit_3)
+
+# Simulate the distribution of this test statistic over 1000 values
+sims <- parboot(object = Fit_3, statistic = chisq, nsim = 500)
+
+
+# Plot the distribution of the previously simulated test statistic alongside that of model Fit_3
+hist(sims@t.star[, 1], xlab = 'Chi square value', xlim = c(0, 800),
+main = 'Distribution of test statistic',
+cex.axis = 1.5, cex.lab = 1.5, cex.main = 1.5)
+lines(x = rep(chisq(Fit_3), 2),
+y = c(0, 600),
+col = 'red', lwd = 3)
+
+# Obtain p-values from the observed and simulated test statistic
+sum(sims@t.star[, 1] > chisq(Fit_3)) / 500
+
+```
+The test statistic of the top model falls slightly skewed from the center of the distribution of the simulated test statistic. This tells us that we may have a reasonable representation of the data generating process. To further evaluate this, null hypothesis significance testing demonstrated that with a p-value > 0.05, we fail to reject the null hypothesis that our fitted model is the data-generating model. 
+
+
+
+8. What is the closure assumption? What are the consequences of violating the closure assumption? Tell me why violating the closure assumption results in these consequences.
+
+* The closure assumption in occupancy modeling, is we assume that a species is present/ absent across all replicate surveys. Regardless of the patterns of detection/ non-detection. By assuming closure, we assume that if a species was detected at one of our sites then it was present at all of our surveys. Similarly, if it was absent at one of our sites, it was absent across all of our surveys. This assumption is critical when we estimate detection probability of a species. 
+
+* Violating the closure assumption results in underestimation of the detection probability of the species and overestimation of its occupancy probability. 
+
+* When we violate the closure assumption; if we assume non-detection of the species across all surveys even if we detected it at one site, It will underestimate the detection probability because we are assuming non-detection based on a known number of surveys where we only detected the species once. This overestimates occupancy probability, because even though we only detected the species once we are estimating occupancy based on a known number of sites where we only observed it once.
+
+
+9. Assume you have variable p that is bounded between 0 and 1. Further, assume p = 0.25. What link
+function would you use to transform p to the real number line? What is the analogous vale of p = 0.25 on the real number line?
+
+* logit link function
+```{r}
+# Real number line value for when p = 0.25
+log(0.25/ (1-0.25))
+
+```
+
+
+10. Assume you have a random variable that can only obtain values of 0, 1, 2, ..., 1. What probability distribution might you use to model such data? What is (are) the parameter(s) of this probability distribution? What link function might you use if you wanted to model that parameter as a linear function of variables?
+
+* A Poisson model is ideal for this data.
+*  The parameter of a Poisson model is the rate or intensity of events/ observations over a specified sample unit.
+* Log link function
+
+
+
+11. Discuss null hypothesis significance testing within the context of model checking. Be sure to include the following phrases in your description:
+• assumptions of the null hypothesis
+• test statistic
+• p-value
+• reject or fail to reject the null hypothesis
+
+* When performing model checking, we have to compare a select a quantity from our fitted model to that of simulated model that we assume to have "true" representation of actual data. The test statistic is a useful quantify for model checking purposes, specifically the Pearson Residuals, because it demonstrates the the discrepancy between observed and expected values. Once we simulate the test statistic over a known number of repetitions, we can evaluate where the test statistic of the fitted model falls in this distribution. If it falls within this distribution, we can determine if the fitted model is an accurate data-generating model. To verify this further, null hypothesis significance testing is used to evaluate the statistical significance of this distribution. We evaluate the calculated p-value for our null hypothesis to an assumed alpha p-value of 0.05, if the p-value is less than this value, we reject our null hypothesis or if it is greater we fail to reject our null hypothesis.
+
+
+12. $$y = B_0 + B_1x_1 + B_2x_2 + B_3x_3 + B_4x_2x_3$$
+where x1 is categorical and is coded = 1 if variable x1 obtains level “b”, and is coded = 0 if x1 obtains level “a”; and x2 and x3 are both continuous random variables. Interpret the coefficient Beta 1
+
+* Beta 1 is the difference between levels of variable x1; levels "a" and "b", when variable x2 and x3 remain = 0.
+
+13. How does the response variable change in response to a 1-unit change in x2?
+
+* For every 1-unit change in x2, the response variable changes per Beta 2 unit when x1 and x3 remain constant.
+
+
